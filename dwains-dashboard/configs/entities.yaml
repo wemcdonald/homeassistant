@@ -1,0 +1,419 @@
+binary_sensor.espresense_living_room:
+  hidden: true
+light.living_room_ceiling:
+  hidden: false
+light.living_room_table:
+  hidden: false
+light.living_room_bar2:
+  hidden: true
+light.living_room_ceiling_bar:
+  hidden: false
+sensor.espresense_living_room_uptime:
+  hidden: true
+sensor.espresense_living_room_free_mem:
+  hidden: true
+button.espresense_living_room_restart:
+  hidden: true
+number.espresense_living_room_max_distance:
+  hidden: true
+number.espresense_living_room_absorption:
+  hidden: true
+switch.espresense_living_room_auto_update:
+  hidden: true
+switch.espresense_living_room_arduino_ota:
+  hidden: true
+switch.espresense_living_room_prerelease:
+  hidden: true
+button.espresense_living_room_update:
+  hidden: true
+button.espresense_living_room_enroll:
+  hidden: true
+device_tracker.espresense_living_room:
+  hidden: true
+device_tracker.uap_iw_livingroom:
+  hidden: true
+update.uap_iw_livingroom:
+  hidden: true
+sensor.home_battery:
+  hidden: true
+sensor.home_c02:
+  hidden: false
+sensor.home_humidity:
+  hidden: true
+sensor.home_pm_0_1:
+  hidden: true
+sensor.home_pm_1_0:
+  hidden: true
+sensor.home_pm_2_5:
+  hidden: true
+sensor.home_temperature:
+  hidden: true
+sensor.home_voc:
+  hidden: true
+sensor.home_air_quality_index:
+  hidden: false
+sensor.purpleair_indoor_pm2_5_aqi_a_raw:
+  hidden: true
+sensor.purpleair_indoor_pm2_5_atm_confidence:
+  hidden: true
+sensor.purpleair_indoor_particulate_matter_0_1:
+  hidden: true
+sensor.purpleair_indoor_particulate_matter_2_5:
+  hidden: true
+sensor.purpleair_indoor_particulate_matter_10:
+  hidden: true
+sensor.purpleair_indoor_air_quality_index_epa:
+  hidden: true
+sensor.purpleair_indoor_air_quality_index_lrapa:
+  hidden: true
+sensor.purpleair_indoor_humidity:
+  hidden: true
+sensor.purpleair_indoor_temperature:
+  hidden: true
+sensor.purpleair_indoor_dewpoint:
+  hidden: true
+sensor.purpleair_indoor_pressure:
+  hidden: true
+sensor.purpleair_indoor_rssi:
+  hidden: true
+light.kitchen_island_pendants:
+  hidden: false
+light.kitchen_main_lights:
+  hidden: false
+light.kitchen_cabinets:
+  hidden: false
+device_tracker.espresense_700a99:
+  hidden: true
+binary_sensor.espresense_kitchen:
+  hidden: true
+sensor.espresense_kitchen_uptime:
+  hidden: true
+sensor.espresense_kitchen_free_mem:
+  hidden: true
+button.espresense_kitchen_restart:
+  hidden: true
+number.espresense_kitchen_max_distance:
+  hidden: true
+number.espresense_kitchen_absorption:
+  hidden: true
+switch.espresense_kitchen_auto_update:
+  hidden: true
+switch.espresense_kitchen_arduino_ota:
+  hidden: true
+switch.espresense_kitchen_prerelease:
+  hidden: true
+button.espresense_kitchen_update:
+  hidden: true
+button.espresense_kitchen_enroll:
+  hidden: true
+light.garage_main_lights:
+  hidden: false
+light.garage_storage:
+  hidden: false
+binary_sensor.espresense_garage:
+  hidden: true
+sensor.espresense_garage_uptime:
+  hidden: true
+sensor.espresense_garage_free_mem:
+  hidden: true
+button.espresense_garage_restart:
+  hidden: true
+button.espresense_garage_update:
+  hidden: true
+button.espresense_garage_enroll:
+  hidden: true
+number.espresense_garage_max_distance:
+  hidden: true
+number.espresense_garage_absorption:
+  hidden: true
+switch.espresense_garage_auto_update:
+  hidden: true
+switch.espresense_garage_arduino_ota:
+  hidden: true
+switch.espresense_garage_prerelease:
+  hidden: true
+cover.garage_door:
+  hidden: false
+binary_sensor.garage_door_myq_gateway:
+  hidden: true
+switch.compuer_light:
+  hidden: true
+sensor.compuer_light_current_power:
+  hidden: true
+sensor.compuer_light_today_energy:
+  hidden: true
+binary_sensor.compuer_light_device:
+  hidden: false
+device_tracker.uap_ac_pro_garage:
+  hidden: true
+update.uap_ac_pro_garage:
+  hidden: true
+device_tracker.espresense_garage:
+  hidden: true
+binary_sensor.roku_ultra_supports_airplay:
+  hidden: true
+binary_sensor.roku_ultra_headphones_connected:
+  hidden: true
+binary_sensor.roku_ultra_supports_find_remote:
+  hidden: true
+binary_sensor.roku_ultra_supports_ethernet:
+  hidden: true
+device_tracker.rokuultra:
+  hidden: true
+device_tracker.espressif_3:
+  hidden: true
+media_player.roku_ultra:
+  hidden: true
+remote.roku_ultra:
+  hidden: true
+sensor.roku_ultra_active_app:
+  hidden: true
+sensor.roku_ultra_active_app_id:
+  hidden: true
+light.master_bedroom_robin_s_light:
+  hidden: false
+light.master_bedroom_will_s_light:
+  hidden: false
+light.master_bedroom_accent_lights:
+  hidden: false
+light.master_bedroom_main_lights:
+  hidden: false
+light.master_bedroom_bathroom:
+  hidden: false
+device_tracker.espresense_10a629:
+  hidden: true
+device_tracker.uap_iw_hd_master:
+  hidden: true
+update.uap_iw_hd_master:
+  hidden: true
+binary_sensor.espresense_master_bedroom:
+  hidden: true
+sensor.espresense_master_bedroom_uptime:
+  hidden: true
+sensor.espresense_master_bedroom_free_mem:
+  hidden: true
+button.espresense_master_bedroom_restart:
+  hidden: true
+number.espresense_master_bedroom_max_distance:
+  hidden: true
+number.espresense_master_bedroom_absorption:
+  hidden: true
+switch.espresense_master_bedroom_auto_update:
+  hidden: true
+switch.espresense_master_bedroom_arduino_ota:
+  hidden: true
+switch.espresense_master_bedroom_prerelease:
+  hidden: true
+button.espresense_master_bedroom_update:
+  hidden: true
+button.espresense_master_bedroom_enroll:
+  hidden: true
+switch.outside_upstairs_front_door:
+  hidden: false
+  favorite: false
+switch.outside_downstairs_door:
+  hidden: false
+switch.outside_backyard_lights:
+  hidden: false
+sensor.magneto_charging_rate:
+  hidden: true
+sensor.magneto_energy_added:
+  hidden: true
+sensor.magneto_charger_power:
+  hidden: true
+sensor.magneto_odometer:
+  hidden: true
+sensor.magneto_range:
+  hidden: true
+sensor.magneto_temperature_outside:
+  hidden: true
+sensor.magneto_temperature_inside:
+  hidden: true
+lock.magneto_doors:
+  hidden: true
+climate.magneto_hvac_climate_system:
+  hidden: true
+cover.magneto_charger_door:
+  hidden: true
+cover.magneto_frunk:
+  hidden: true
+cover.magneto_trunk:
+  hidden: true
+binary_sensor.magneto_parking_brake:
+  hidden: true
+binary_sensor.magneto_online:
+  hidden: true
+binary_sensor.magneto_charger:
+  hidden: true
+binary_sensor.magneto_charging:
+  hidden: true
+device_tracker.magneto_location_tracker:
+  hidden: true
+switch.magneto_sentry_mode:
+  hidden: true
+switch.magneto_polling:
+  hidden: true
+switch.magneto_charger:
+  hidden: true
+button.magneto_horn:
+  hidden: true
+button.magneto_flash_lights:
+  hidden: true
+button.magneto_wake_up:
+  hidden: true
+button.magneto_force_data_update:
+  hidden: true
+select.magneto_cabin_overheat_protection:
+  hidden: true
+select.magneto_heated_seat_left:
+  hidden: true
+select.magneto_heated_seat_right:
+  hidden: true
+select.magneto_heated_seat_rear_left:
+  hidden: true
+select.magneto_heated_seat_rear_center:
+  hidden: true
+select.magneto_heated_seat_rear_right:
+  hidden: true
+number.magneto_charge_limit:
+  hidden: true
+number.magneto_charging_amps:
+  hidden: true
+sensor.magneto_battery:
+  hidden: true
+update.magneto_software_update:
+  hidden: true
+camera.camera:
+  hidden: false
+binary_sensor.miraloma_park_weather_battery:
+  hidden: true
+sensor.miraloma_park_weather_abs_pressure:
+  hidden: true
+sensor.miraloma_park_weather_rel_pressure:
+  hidden: true
+sensor.miraloma_park_weather_daily_rain:
+  hidden: true
+sensor.miraloma_park_weather_dew_point:
+  hidden: true
+sensor.miraloma_park_weather_event_rain:
+  hidden: true
+sensor.miraloma_park_weather_feels_like:
+  hidden: true
+sensor.miraloma_park_weather_hourly_rain_rate:
+  hidden: true
+sensor.miraloma_park_weather_humidity:
+  hidden: true
+sensor.miraloma_park_weather_humidity_in:
+  hidden: true
+sensor.miraloma_park_weather_last_rain:
+  hidden: true
+sensor.miraloma_park_weather_max_gust:
+  hidden: true
+sensor.miraloma_park_weather_monthly_rain:
+  hidden: true
+sensor.miraloma_park_weather_solar_rad:
+  hidden: true
+sensor.miraloma_park_weather_solar_rad_lx:
+  hidden: true
+sensor.miraloma_park_weather_temp:
+  hidden: true
+sensor.miraloma_park_weather_inside_temp:
+  hidden: true
+sensor.miraloma_park_weather_lifetime_rain:
+  hidden: true
+sensor.miraloma_park_weather_uv_index:
+  hidden: true
+sensor.miraloma_park_weather_weekly_rain:
+  hidden: true
+sensor.miraloma_park_weather_wind_dir:
+  hidden: true
+sensor.miraloma_park_weather_wind_gust:
+  hidden: true
+sensor.miraloma_park_weather_wind_speed:
+  hidden: true
+binary_sensor.water_heater_water_detected:
+  hidden: false
+binary_sensor.french_drain_water_detected:
+  hidden: false
+sensor.water_heater_temperature:
+  hidden: true
+sensor.water_heater_humidity:
+  hidden: true
+sensor.water_heater_battery:
+  hidden: true
+sensor.french_drain_temperature:
+  hidden: true
+sensor.french_drain_humidity:
+  hidden: true
+sensor.french_drain_battery:
+  hidden: true
+device_tracker.espressif:
+  hidden: true
+device_tracker.espressif_2:
+  hidden: true
+light.mariana_s_room_accent_lights:
+  hidden: false
+light.mariana_s_room_main_lights:
+  hidden: false
+binary_sensor.espresense_office:
+  hidden: true
+sensor.espresense_office_uptime:
+  hidden: true
+sensor.espresense_office_free_mem:
+  hidden: true
+button.espresense_office_restart:
+  hidden: true
+number.espresense_office_max_distance:
+  hidden: true
+number.espresense_office_absorption:
+  hidden: true
+switch.espresense_office_auto_update:
+  hidden: true
+switch.espresense_office_arduino_ota:
+  hidden: true
+switch.espresense_office_prerelease:
+  hidden: true
+button.espresense_office_update:
+  hidden: true
+button.espresense_office_enroll:
+  hidden: true
+sensor.cnlbp612c_613c_canon_cartridge_045_black_toner:
+  hidden: true
+sensor.cnlbp612c_613c_canon_cartridge_045_cyan_toner:
+  hidden: true
+sensor.cnlbp612c_613c_canon_cartridge_045_magenta_to:
+  hidden: true
+sensor.cnlbp612c_613c_canon_cartridge_045_yellow_ton:
+  hidden: true
+sensor.cnlbp612c_613c:
+  hidden: true
+device_tracker.espresense_office:
+  hidden: true
+binary_sensor.blueiris_cameras_roof_motion:
+  hidden: true
+binary_sensor.blueiris_cameras_backyard_motion:
+  hidden: true
+binary_sensor.blueiris_cameras_upstairs_motion:
+  hidden: true
+binary_sensor.blueiris_cameras_downstairs_motion:
+  hidden: true
+binary_sensor.blueiris_cameras_alerts:
+  hidden: true
+switch.blueiris_cameras_profile_all_active:
+  hidden: true
+switch.blueiris_cameras_profile_at_home:
+  hidden: true
+switch.blueiris_cameras_schedule_default:
+  hidden: true
+switch.blueiris_cameras_schedule_athome:
+  hidden: true
+switch.blueiris_cameras_schedule_away:
+  hidden: true
+binary_sensor.will_desk_lamp_device:
+  hidden: true
+person.robin_shostack:
+  devices_sort_order: 1
+person.mariana:
+  devices_sort_order: 2
+person.will_mcdonald:
+  devices_sort_order: 3

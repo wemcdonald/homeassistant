@@ -1,9 +1,10 @@
-*
-!*.yaml
-!*.py
-!.gitignore
-!*.md
-
+*.json
+*.pem
+*.log*
+*.db
+*.db-wal
+*.db-shm
+nest/event_media/
 # Ignore folders.
 .storage
 .cloud

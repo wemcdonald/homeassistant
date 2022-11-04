@@ -1,0 +1,13 @@
+col_span: '1'
+col_span_lg: '1'
+col_span_xl: '1'
+detail: 1
+entity: sensor.magneto_battery
+graph: none
+hours_to_show: 24
+icon: mdi:car-electric-outline
+position: top
+row_span: '1'
+row_span_lg: '1'
+row_span_xl: '1'
+type: sensor

@@ -1,0 +1,51 @@
+apps:
+  willflix:
+    common:
+      default_notify: 
+        - will
+      notify_entities:
+        will: mobile_app_will_s_iphone_14_pro
+        robin: mobile_app_robin_s_iphone
+    fridge:
+      entities:
+        sensor: sensor.fridge_temperature
+      notify:
+        - will
+        # - robin
+      max_temp_f: 40
+      hold_minutes: 30
+    garage_lights:
+      type: master_switch
+      entities:
+        masters:
+          - light.garage_main_lights
+          # - light.garage_workbench_lights
+        slave_areas:
+          - garage
+
+    tesla:
+      times:
+        - "once(18:00)"
+        - "once(21:00)"
+      entities:
+        battery: sensor.magneto_battery
+        charger: binary_sensor.magneto_charger
+        wake_up: button.magneto_wake_up
+      standard_threshold_percent: 40
+      low_threshold_percent: 20
+    porch_door_left_open:
+      times:
+        - "once(sunset)"
+        - "once(BEDTIME)"
+      entities:
+        porch_door: binary_sensor.porch_door_contact
+      min_open_time_minutes: 10
+      notify: will
+    bike_charger:
+      times:
+        - "once(20:00)"
+      entities:
+        charger: sensor.bike_charger_current_power
+      min_power: 0.1
+      notify:
+        - will

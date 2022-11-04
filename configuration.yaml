@@ -1,0 +1,91 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+wake_on_lan:
+
+logger:
+  default: info
+  logs:
+    custom_components.pyscript: debug
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+homeassistant:
+  name: Home
+  unit_system: metric
+  currency: USD
+  time_zone: "America/Los_Angeles"
+  external_url: "https://home.willflix.org"
+  internal_url: "https://home.willflix.org"
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 127.0.0.1
+    - 10.0.0.55
+    - 10.0.0.33
+
+
+sensor: !include tracker_sensors.yaml
+
+cloud:
+  google_actions: !include google_assistant.yaml
+
+google_assistant:
+  project_id: willflixhome
+  service_account: !include willflixhome-2875f2eaadfd.json
+  report_state: true
+  expose_by_default: true
+  # exposed_domains:
+  #   - camera
+  #   - group
+  #   - input_boolean
+  #   - input_select
+  #   - scene
+  #   - switch
+  #   - light
+  #   - lock
+  #   - cover
+  #   - climate
+  #   - vacuum
+  #   - sensor
+  #exposed_domains:
+  #  - switch
+  #  - light
+  entity_config:
+    light.garage_workbench_lights:
+      name: "falcon heavy"
+      aliases:
+        - "moon lights"
+      room: garage
+
+# Locks controls
+lock:
+  - platform: kevo_plus
+    email: "wemcdonald@gmail.com"  # Your Kevo account Email
+    password: "flyingleap1"        # Your Kevo account Password
+    locks:
+      - lock_id: c5ed12cc-e42f-4287-a326-b8c0f11432d2 # Downstairs
+        max_retries: 10
+        retry_delay: 30
+      - lock_id: 8629dba0-83fd-435e-a343-a882f0e6e491 # Upstairs
+        max_retries: 10
+        retry_delay: 30
+
+pyscript: !include pyscript/config.yaml
+
+frontend:
+  themes: !include_dir_merge_named themes
+  extra_module_url:
+    - /hacsfiles/lovelace-card-mod/card-mod.js
+
+# set Lovelace to YAML mode
+lovelace:
+  mode: yaml
