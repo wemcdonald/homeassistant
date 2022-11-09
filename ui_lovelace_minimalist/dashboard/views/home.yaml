@@ -1,0 +1,223 @@
+title: Home
+path: home
+cards:
+  - type: "custom:button-card"
+    template: "card_esh_welcome"
+    triggers_update: "input_boolean.minimalist_welcome_toggle"
+    variables:
+      ulm_card_esh_welcome_collapse: input_boolean.minimalist_welcome_toggle
+      ulm_weather: "weather.home"
+      entity_1:
+        nav: "house"
+        icon: "mdi:home"
+        name: "House"
+        color: "blue"
+      entity_2:
+        nav: "lights"
+        icon: "mdi:lightbulb"
+        name: "Lights"
+        color: "yellow"
+      entity_3:
+        nav: "security"
+        icon: "mdi:shield"
+        name: Secure
+        color: "green"
+      entity_4:
+        nav: "network"
+        icon: "mdi:nas"
+        name: Lab
+        color: "purple"
+      entity_5:
+        nav: "network"
+        icon: "mdi:flask"
+        name: Lab
+        color: "red"
+
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        template: card_person
+        entity: person.robin_shostack
+        variables:
+          ulm_card_person_entity: person.robin_shostack
+          ulm_card_person_use_entity_picture: true
+          ulm_card_person_icon: mdi:face-man
+          ulm_card_person_eta: sensor.robin_s_eta_home
+          ulm_address: sensor.robin_s_iphone_geocoded_location
+      - type: 'custom:button-card'
+        template: card_person
+        entity: person.will_mcdonald
+        variables:
+          ulm_card_person_entity: person.will_mcdonald
+          ulm_card_person_use_entity_picture: true
+          ulm_card_person_icon: mdi:face-man
+          ulm_card_person_eta: sensor.will_s_eta_home
+          ulm_address: sensor.will_s_iphone_14_pro_geocoded_location
+      - type: 'custom:button-card'
+        template: card_person
+        entity: person.mariana
+        variables:
+          ulm_card_person_entity: person.mariana
+          ulm_card_person_use_entity_picture: true
+          ulm_card_person_icon: mdi:face-woman
+  - type: "custom:button-card"
+    template: "card_scenes_welcome"
+    variables:
+      entity_1:
+        entity_id: scene.stories
+        icon: "mdi:book-open-variant" #OPTIONAL
+        name: "Storytime" #OPTIONAL
+        color: green
+      entity_2:
+        entity_id: scene.colin_sleep
+        icon: "mdi:bed-clock" #OPTIONAL
+        name: "Colin Sleep" #OPTIONAL
+        color: yellow
+      entity_3:
+        entity_id: scene.nightstand
+        icon: "mdi:lamp" #OPTIONAL
+        name: "Nightstand" #OPTIONAL
+        color: pink
+      entity_4:
+        entity_id: scene.bedtime
+        icon: "mdi:power-sleep" #OPTIONAL
+        name: "Bedtime" #OPTIONAL
+        color: purple
+      entity_5:
+        entity_id: scene.sleep
+        icon: "mdi:sleep" #OPTIONAL
+        name: "Sleep" #OPTIONA
+        color: blue
+
+  - type: 'custom:button-card'
+    template: card_title
+    name: Rooms
+
+  - type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Living Room
+        entity: light.living_room_lights
+        icon: mdi:sofa
+        tap_action:
+          action: navigate
+          navigation_path: "living-room"
+        variables:
+          ulm_custom_card_esh_room_light_entity: light.living_room_lights
+          ulm_card_dynamic_color: true
+        label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
+
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Kitchen
+        entity: light.kitchen_lights
+        icon: mdi:silverware-fork-knife
+        tap_action:
+          action: navigate
+          navigation_path: "kitchen"
+        variables:
+          ulm_custom_card_esh_room_light_entity: light.kitchen_lights
+          ulm_card_dynamic_color: true
+        #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
+
+  - type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Garage
+        entity: light.garage_lights
+        icon: mdi:garage
+        tap_action:
+          action: navigate
+          navigation_path: "garage"
+        variables:
+          ulm_custom_card_esh_room_light_entity: light.garage_lights
+          ulm_card_dynamic_color: true
+        #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
+
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Bedroom
+        entity: light.bedroom_lights
+        icon: mdi:bed
+        tap_action:
+          action: navigate
+          navigation_path: "bedroom"
+        variables:
+          ulm_custom_card_esh_room_light_entity: light.bedroom_lights
+          ulm_card_dynamic_color: true
+        #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
+
+  - type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: "Colin's Room"
+        entity: light.colins_room_lights
+        icon: mdi:alpha-c-circle
+        tap_action:
+          action: navigate
+          navigation_path: "colins-room"
+        variables:
+          ulm_custom_card_esh_room_light_entity: light.colins_room_lights
+          ulm_card_dynamic_color: true
+        #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
+
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Mariana's Room
+        entity: light.marianas_room_lights
+        icon: mdi:alpha-m-circle
+        tap_action:
+          action: navigate
+          navigation_path: "marianas-room"
+        variables:
+          ulm_custom_card_esh_room_light_entity: light.marianas_room_lights
+          ulm_card_dynamic_color: true
+        #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
+
+  - type: horizontal-stack
+    cards:
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Office
+        entity: light.office_lights
+        icon: mdi:chair-rolling
+        tap_action:
+          action: navigate
+          navigation_path: "office-room"
+        variables:
+          ulm_custom_card_esh_room_light_entity: light.office_lights
+          ulm_card_dynamic_color: true
+        #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
+
+      - type: "custom:button-card"
+        template:
+          - card_esh_room
+          - yellow_on
+        name: Outside
+        entity: light.outside_lights
+        icon: mdi:pine-tree
+        tap_action:
+          action: navigate
+          navigation_path: "outside"
+        variables:
+          ulm_custom_card_esh_room_light_entity: light.outside_lights
+          ulm_card_dynamic_color: true
+        #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
+

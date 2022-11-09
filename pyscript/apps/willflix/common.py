@@ -1,6 +1,5 @@
-import inspect 
-
 app_config = None
+config = None
 registered_triggers = []
 
 def _master_switch(common, name):
@@ -41,12 +40,17 @@ def _master_switch(common, name):
 
   app.register(light_turned_on)
 
+def _run_scene(common, name, scene):
+  app = Scene(name, scene)
+  app.create_scene()
+
 
 class SubApp:
   def __init__(self, name):
+    self.full_config = config
     self.app_config = app_config
     self.name = name.replace('willflix.', '')
-    self.config = app_config[self.name]
+    self.config = app_config.get(self.name, {})
     self.entities = self.config.get('entities')
 
   def register(self, trigger):
@@ -62,9 +66,11 @@ class SubApp:
     log.error(msg.replace("\n", f"\n[Willflix][{self.name}]: "))
 
   
-  def turn_on_light(self, area_id=None, device_id=None, entity_id=None):
+  def turn_on_light(self, area_id=None, device_id=None, entity_id=None, brightness=None):
     self.info("Turning on light: area={area_id}")
-    light.turn_on(area_id=area_id, device_id=device_id, entity_id=entity_id, brightness=254)
+    if brightness is None:
+      brightness = 254
+    light.turn_on(area_id=area_id, device_id=device_id, entity_id=entity_id, brightness=brightness)
 
   def turn_off_light(self, area_id=None, device_id=None, entity_id=None):
     self.info("Turning off light: area={area_id}")
@@ -81,3 +87,40 @@ class SubApp:
       self.info(f"TITLE: {title}")
       self.info(f" BODY: {message}")
       service.call("notify", person, title=title, message=message)
+
+
+class Scene(SubApp):
+  def __init__(self, name, scene):
+    # TODO: Figure out why super() wasn't working
+    self.full_config = config
+    self.app_config = app_config
+    self.name = name.replace('willflix.', '')
+    self.config = app_config.get(self.name, {})
+    self.entities = self.config.get('entities')
+
+    self.scene = scene
+
+  def create_scene(self):
+    @service()
+    def run_scene():
+      # Turn things on
+      for area_id in self.scene.get('turn_on', {}).get('areas', []):
+        self.turn_on_light(area_id=area_id)
+      for entity_id in self.scene.get('turn_on', {}).get('entities', []):
+        self.turn_on_light(entity_id=entity_id)
+
+      # Turn things off
+      for area_id in self.scene.get('turn_off', {}).get('areas', []):
+        self.turn_off_light(area_id=area_id)
+      for entity_id in self.scene.get('turn_off', {}).get('entities', []):
+        self.turn_off_light(entity_id=entity_id)
+
+      # Dim things
+      for entity_id, percent in self.scene.get('dim', {}).get('entities', {}):
+        brightness = int(percent/100.0 * 255)
+        self.turn_on_light(entity_id=entity_id, brightness=brightness)
+
+    name = f"run_scene_{self.name}"
+    self.infod(f"\n\n Made function {name}\n\n")
+    run_scene.__name__  = name
+    self.register(name)

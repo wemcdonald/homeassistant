@@ -1,0 +1,61 @@
+all_turn_off:
+  turn_off:
+    areas:
+      - colin_s_room
+      - hallway
+      - kitchen
+      - living_room
+      - mariana_s_room
+      - master_bedroom
+      - office
+      - outside
+      - second_bathroom
+      - stairs
+bedtime:
+  turn_off:
+    areas:
+      - colin_s_room
+      # - hallway # Dimmed
+      - kitchen
+      - living_room
+      # - mariana_s_room # Mariana mode
+      # - master_bedroom # Us reading
+      # - office # Guest mode
+      - outside
+      - second_bathroom
+      - stairs
+    entities:
+      - light.master_bedroom_main_lights
+      - light.master_bedroom_accent_lights
+  turn_on:
+    entities:
+      - light.master_bedroom_will_s_light
+      - light.master_bedroom_robin_s_light
+  dim:
+    entities:
+      light.hallway_lights: 7
+      light.stairs_main_lights: 7
+colin_sleep:
+  turn_off:
+    areas:
+      - colin_s_room
+story_time:
+  turn_off:
+    entities:
+      - light.colin_s_room_accent_lights
+      - light.colin_s_room_main_lights
+  dim:
+    entities:
+      light.colin_s_room_sconces: 30
+sleep:
+  depends_turn_on:
+    - bedtime
+  turn_off:
+    areas:
+      - master_bedroom
+morning:
+  turn_on:
+    areas: 
+    entities:
+      - light.master_bedroom_will_s_light
+      - light.master_bedroom_robin_s_light

@@ -83,9 +83,15 @@ pyscript: !include pyscript/config.yaml
 
 frontend:
   themes: !include_dir_merge_named themes
-  extra_module_url:
-    - /hacsfiles/lovelace-card-mod/card-mod.js
+  #extra_module_url:
+  #  - /hacsfiles/lovelace-card-mod/card-mod.js
 
 # set Lovelace to YAML mode
 lovelace:
   mode: yaml
+
+zone: 
+  - name: Home
+    latitude: 37.738014
+    longitude: -122.444349
+    radius: 100
