@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.area_registry",
+  "data": {
+    "areas": [
+      {
+        "name": "Living Room",
+        "id": "living_room",
+        "picture": null
+      },
+      {
+        "name": "Kitchen",
+        "id": "kitchen",
+        "picture": null
+      },
+      {
+        "name": "Garage",
+        "id": "garage",
+        "picture": null
+      },
+      {
+        "name": "Stairs",
+        "id": "stairs",
+        "picture": null
+      },
+      {
+        "name": "Mariana's Room",
+        "id": "mariana_s_room",
+        "picture": null
+      },
+      {
+        "name": "Master Bedroom",
+        "id": "master_bedroom",
+        "picture": null
+      },
+      {
+        "name": "Outside",
+        "id": "outside",
+        "picture": null
+      },
+      {
+        "name": "Second Bathroom",
+        "id": "second_bathroom",
+        "picture": null
+      },
+      {
+        "name": "Server Room",
+        "id": "server_room",
+        "picture": null
+      },
+      {
+        "name": "Hallway",
+        "id": "hallway",
+        "picture": null
+      },
+      {
+        "name": "Colin's Room",
+        "id": "colin_s_room",
+        "picture": null
+      },
+      {
+        "name": "Office",
+        "id": "office",
+        "picture": null
+      }
+    ]
+  }
+}

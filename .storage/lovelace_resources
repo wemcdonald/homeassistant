@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "url": "/browser_mod.js?automatically-added",
+        "type": "module",
+        "id": "cf0b0eb6a6064c38973b0ee1d502f920"
+      }
+    ]
+  }
+}

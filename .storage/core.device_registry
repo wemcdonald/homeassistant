@@ -1,0 +1,3361 @@
+{
+  "version": 1,
+  "minor_version": 3,
+  "key": "core.device_registry",
+  "data": {
+    "devices": [
+      {
+        "area_id": null,
+        "config_entries": [
+          "4e86185bd8d9f7a888e1701d0ad6588f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "414c15bdf08ec4146cfb755549b4fb16",
+        "identifiers": [
+          [
+            "cast",
+            "9a63bebeaf639c1948893e7d35533864"
+          ]
+        ],
+        "manufacturer": "Google Inc.",
+        "model": "Google Nest Hub Max",
+        "name_by_user": null,
+        "name": "Living Room Display",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4e86185bd8d9f7a888e1701d0ad6588f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "f3d353cbb50a4dccc2b60d02fdcc7057",
+        "identifiers": [
+          [
+            "cast",
+            "b992ec44e6671fd29f57c715ae669057"
+          ]
+        ],
+        "manufacturer": "Google Inc.",
+        "model": "Google Home Mini",
+        "name_by_user": null,
+        "name": "Bathroom speaker",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4e86185bd8d9f7a888e1701d0ad6588f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "554c61123b1898d374080a8d9a590a4b",
+        "identifiers": [
+          [
+            "cast",
+            "aff03818cc96916716fdf5610188711a"
+          ]
+        ],
+        "manufacturer": "Google Inc.",
+        "model": "Google Home Mini",
+        "name_by_user": null,
+        "name": "Master Bathroom speaker",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "colin_s_room",
+        "config_entries": [
+          "4e86185bd8d9f7a888e1701d0ad6588f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "d21a66bc351c8c0e44f423fa7113023f",
+        "identifiers": [
+          [
+            "cast",
+            "d11a6cce9e57bb7c0cdef226e214c743"
+          ]
+        ],
+        "manufacturer": "Google Inc.",
+        "model": "Google Home Mini",
+        "name_by_user": null,
+        "name": "Colin's Room Speaker",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4e86185bd8d9f7a888e1701d0ad6588f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "f12219442fabd0326cb7da0a6e5c4cd3",
+        "identifiers": [
+          [
+            "cast",
+            "076b30875dcb7c79cf8c421554d7620b"
+          ]
+        ],
+        "manufacturer": "Google Inc.",
+        "model": "Google Home Max",
+        "name_by_user": null,
+        "name": "Living Room Speaker",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4e86185bd8d9f7a888e1701d0ad6588f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "5bb8f7a1cf8ebdacbdba83429f7aba17",
+        "identifiers": [
+          [
+            "cast",
+            "946566b1321f4d94ac5f58801648ebf3"
+          ]
+        ],
+        "manufacturer": "Google Inc.",
+        "model": "Google Cast Group",
+        "name_by_user": null,
+        "name": "Living Room",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4e86185bd8d9f7a888e1701d0ad6588f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "22c044bac7fbcd6419abdfc4de8626c4",
+        "identifiers": [
+          [
+            "cast",
+            "ad0c9b243b42408b8b260bbf17b1466d"
+          ]
+        ],
+        "manufacturer": "Google Inc.",
+        "model": "Google Cast Group",
+        "name_by_user": null,
+        "name": "All speakers",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4e86185bd8d9f7a888e1701d0ad6588f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "8d584d843b352d5670fc41d18b8f6690",
+        "identifiers": [
+          [
+            "cast",
+            "32be83de84c646d1814b9586005f3f31"
+          ]
+        ],
+        "manufacturer": "Bose",
+        "model": "Bose Home Speaker 300",
+        "name_by_user": null,
+        "name": "Bose",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "4e86185bd8d9f7a888e1701d0ad6588f"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "53b6e4078cb0d7593871dde6ee8fad65",
+        "identifiers": [
+          [
+            "cast",
+            "a06be24b1b31ed9c2658a33b25ecc30c"
+          ]
+        ],
+        "manufacturer": "Google Inc.",
+        "model": "Google Nest Hub",
+        "name_by_user": null,
+        "name": "Master Bedroom Display",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "9b0fb1739054ad394736c4f29a9cdb66"
+        ],
+        "configuration_url": "https://www.met.no/en",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "5ed4a49d0d7dff56cdf4a66355a5e37e",
+        "identifiers": [
+          [
+            "met"
+          ]
+        ],
+        "manufacturer": "Met.no",
+        "model": "Forecast",
+        "name_by_user": null,
+        "name": "Forecast",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "server_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "a27f364fe1a46ba173ade9a1047586f0",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            32004725
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "L-BDG2-WH (SmartBridge)",
+        "name_by_user": "Lutron Bridge",
+        "name": "Smart Bridge 2",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "9c486c840aee3e5cba5fe7716c2dd8f0",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            43938246
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Unnamed Pico Remote 1",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "4d872e9b59cc4d27ddbd451ce005db78",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            43938241
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Unnamed Pico Remote 2",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "e000d2389a4be95cf1084b690727e98b",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            42367783
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Bar Lights Remote",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "4ad10f670610a1949e2bdce8ff583d46",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            42620181
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Accent Lights Remote 1",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "7da9ff6b2553e1a74ef8f95b56ce38f5",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            41837766
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Unnamed Pico Remote 4",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "fd467a3ab48c65291394682f69fd80c7",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            42007215
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Unnamed Pico Remote 5",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "b6a80f5692253910ec4326b34181e3a4",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            42432716
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Unnamed Pico Remote 6",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "6244799de9a367830c80fb25ae883415",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            42620253
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Unnamed Pico Remote 7",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "0ae3366a29008b360260653a54c9c9e7",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            11594538
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Main Lights Remote 1",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "2ab7b8866f488f1578783ed669aed35e",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            43012425
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Main Lights Remote 2",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "8960773ed428957d79a766683cf91be2",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            46774403
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Wreath Remote 1",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "colin_s_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "679587afee9976c4973bbaf09163c622",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            34375341
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Colin's Bedroom Main Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "colin_s_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "1b685b3b49d9e029998cebe99c306b15",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35618524
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Colin's Bedroom Accent Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "colin_s_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "1b91abb27fda825e1274baae937812fa",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            37878863
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5NE-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Colin's Bedroom Sconces",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "hallway",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "1835d2bd4ef5ce5c38b359c0e76b1bce",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35618525
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": "Hallway Lights",
+        "name": "Upstairs Hallway Main Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "7ffc57cf0d362dcc0460ddf47a233a04",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            37492229
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5NE-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Living Room Ceiling",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "60506b1dc0a92a1db883a970ba5bbc7f",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            37878858
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5NE-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Living Room Table",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "018be46036e2fae2810ceda20dc55435",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35096553
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Living Room Bar2",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "8fbd02d279a0c72e3725756a74c2bcf2",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35836973
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5NE-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Living Room Ceiling Bar",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "kitchen",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "0c05e74fadea2634116742a1ded052e0",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            37492226
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5NE-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Kitchen Island Pendants",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "kitchen",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "847c2ef208da2dcc18f22676f106138e",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            37492228
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5NE-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Kitchen Main Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "kitchen",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "c694ffb4ea5fe21d0f5ba79155b626c4",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35096556
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Kitchen Cabinets",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "0b9f654a9a0ba4d3bbd31b082b4c5ee4",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35618522
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Garage Main Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "e0d442e9ddd8dc47ddd9671361782812",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35618523
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Garage Storage",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "stairs",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "f5af7233cccfa247e36ca2bd56d83067",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            37878850
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5NE-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Stairs Main Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "mariana_s_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "b37872f9f576d0d152defbb57b298515",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35800370
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": "Mariana's Room Accent Lights",
+        "name": "Mariana's Room Accent Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "mariana_s_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "ec16800c8a42531fcd3f6ca3594f0134",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35800373
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": "Mariana's Room Sconces",
+        "name": "Mariana's Room Sconces",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "eab89986ec313f68ca58f394ab5889fd",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35618532
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": "Office Accent Lights",
+        "name": "Office Accent Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "fe4b62fe97d2100a8dee085238cd0f11",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35836970
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5NE-XX (WallDimmer)",
+        "name_by_user": "Office Main Lights",
+        "name": "Office Main Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "master_bedroom",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "6e37183a2a72e3873b9337c3f5471c79",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            19472382
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-3PCL-WH (PlugInDimmer)",
+        "name_by_user": null,
+        "name": "Master Bedroom Robin's Light",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "master_bedroom",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "75517f7cf37e15af48c36f181e11010c",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            19472275
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-3PCL-WH (PlugInDimmer)",
+        "name_by_user": null,
+        "name": "Master Bedroom Will's Light",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "master_bedroom",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "e936ceef27619946ea8d4a4501fc1415",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            35618521
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Master Bedroom Accent Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "master_bedroom",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "0720bbb5d574796f99a2420dd4bf0c3b",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            37492231
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5NE-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Master Bedroom Main Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "master_bedroom",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "cdbab7a785440f002cabeafc3bf3cfaa",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            36468420
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": null,
+        "name": "Master Bedroom Bathroom",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "mariana_s_room",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "0168a7998ee02f6cb0b8f403b20f6f39",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            36855738
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-6WCL-XX (WallDimmer)",
+        "name_by_user": "Mariana's Room Main Lights",
+        "name": "Mariana's Room Main Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "e84fde377af54788d63d46aa43ba5fcb",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            19690159
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-3PCL-WH (PlugInDimmer)",
+        "name_by_user": null,
+        "name": "Office Desk Lamp",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "3fbfbf41be45ddb63469452ee95fcf7c",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            19675885
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-3PCL-WH (PlugInDimmer)",
+        "name_by_user": null,
+        "name": "Garage Workbench Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0",
+          "b8e94a7b6e072cf802ec251634a18309"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "5eed28001a1b254d5f776a8d64e770b6",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            37069040
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5WS-DV-XX (WallSwitch)",
+        "name_by_user": null,
+        "name": "Outside Upstairs Front Door",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "05f3d5930ccda6563e1da7e8a8211ca3",
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "92a9c77d3892cc39800db2db6631025f",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            37069050
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5WS-DV-XX (WallSwitch)",
+        "name_by_user": null,
+        "name": "Outside Downstairs Door",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "474e178974e81d72b5d71659b522ea6c",
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "a2a6f0e5d0d73678a734168fec4fb417",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            37069044
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5WS-DV-XX (WallSwitch)",
+        "name_by_user": null,
+        "name": "Outside Backyard Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": "second_bathroom",
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": "https://device-login.lutron.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "65020f042d07773dd8ea0d870832c5ea",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            34409299
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PD-5WS-DV-XX (WallSwitch)",
+        "name_by_user": null,
+        "name": "Second Bathroom Vanity Lights",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a991907c518fbf99fe68f123727ba385"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "d63f107de3a793b86f64155a8fcb667c",
+        "identifiers": [
+          [
+            "tradfri",
+            "7e5175520440005b"
+          ]
+        ],
+        "manufacturer": "IKEA of Sweden",
+        "model": "E1526",
+        "name_by_user": null,
+        "name": "Gateway",
+        "sw_version": "1.19.43",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a991907c518fbf99fe68f123727ba385"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "9a05740686c44c8139fe3ac585c6fb2c",
+        "identifiers": [
+          [
+            "tradfri",
+            65538
+          ]
+        ],
+        "manufacturer": "IKEA of Sweden",
+        "model": "FYRTUR block-out roller blind",
+        "name_by_user": null,
+        "name": "TRADFRI blind",
+        "sw_version": "2.3.088",
+        "via_device_id": "d63f107de3a793b86f64155a8fcb667c"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a991907c518fbf99fe68f123727ba385"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "f42a6869395f0f419c24e6746beceac3",
+        "identifiers": [
+          [
+            "tradfri",
+            65536
+          ]
+        ],
+        "manufacturer": "\u0002KE",
+        "model": "TRADFRI open/close remote",
+        "name_by_user": null,
+        "name": "TRADFRI open/close remote",
+        "sw_version": "2.3.079",
+        "via_device_id": "d63f107de3a793b86f64155a8fcb667c"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "2d907ca1b2be5c8353a4f72962e1bf22"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "38cccac90369f7c5bc3a2615f6602df8",
+        "identifiers": [
+          [
+            "mobile_app",
+            "9554C536-C996-4CA3-9F86-CD69A4581204"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iPhone15,2",
+        "name_by_user": null,
+        "name": "Will's iPhone 14 Pro",
+        "sw_version": "16.1",
+        "via_device_id": null
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517",
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": "http://10.0.0.71",
+        "connections": [
+          [
+            "mac",
+            "58:bf:25:a1:14:08"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "8d29f726357917551653a6543503eca3",
+        "identifiers": [
+          [
+            "mqtt",
+            "espresense_0814a1"
+          ]
+        ],
+        "manufacturer": "ESPresense (esp32)",
+        "model": "ESP32-D0WDQ6",
+        "name_by_user": null,
+        "name": "ESPresense Garage",
+        "sw_version": "v3.1.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "97861a4d59d556c5f1023fd253664bc9"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "9d29372973ca118108eb9a802c1f2a98",
+        "identifiers": [
+          [
+            "myq",
+            "CG0860A18166"
+          ]
+        ],
+        "manufacturer": "The Chamberlain Group Inc.",
+        "model": "LiftMaster Wi-Fi GDO DC w/Battery Backup",
+        "name_by_user": null,
+        "name": "Garage Door",
+        "sw_version": null,
+        "via_device_id": "009561abc111efadf2633ae9fcdf4f6d"
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "97861a4d59d556c5f1023fd253664bc9"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "009561abc111efadf2633ae9fcdf4f6d",
+        "identifiers": [
+          [
+            "myq",
+            "GW11000130AD"
+          ]
+        ],
+        "manufacturer": "The Chamberlain Group Inc.",
+        "model": "MyQ Replacement Logic Board Wi-Fi GDO DC 3/4HP",
+        "name_by_user": null,
+        "name": "Garage Door",
+        "sw_version": "3.12",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "d31725ac042896a388f8a35589ba18f9"
+        ],
+        "configuration_url": "homeassistant://hacs",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "b6df2f156e50ec43a7b1d41ac076c328",
+        "identifiers": [
+          [
+            "hacs",
+            "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
+          ]
+        ],
+        "manufacturer": "hacs.xyz",
+        "model": "",
+        "name_by_user": null,
+        "name": "HACS",
+        "sw_version": "1.28.3",
+        "via_device_id": null
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "bbdc79b2cadcd2f782ca2033895d4701",
+          "59c3328eb9eae361eb26f327fc41a127"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "upnp",
+            "uuid:Insight-1_0-231838K12004BB"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "79eaddfd31ebe991ba7880567581f2f4",
+        "identifiers": [
+          [
+            "wemo",
+            "231838K12004BB"
+          ]
+        ],
+        "manufacturer": "Belkin",
+        "model": "Insight",
+        "name_by_user": "Will Desk Lamp",
+        "name": "Will Desk Lamp",
+        "sw_version": "WeMo_WW_2.00.11408.PVT-OWRT-InsightV2",
+        "via_device_id": null
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "3f2f05ee98bd1aaf7fe84a4f153b62d0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "94c748d67e75e2b0947a8d7be33dedcb",
+        "identifiers": [
+          [
+            "tesla_custom",
+            1492657390846183
+          ]
+        ],
+        "manufacturer": "Tesla",
+        "model": "Model Y",
+        "name_by_user": null,
+        "name": "Magneto",
+        "sw_version": "2022.24.5 2492cccee5b4",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a52b0c8bb1e59fcf6f92e98a4aa43280"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "aa65f48849a28a4966bea0b1c0a4bf2c",
+        "identifiers": [
+          [
+            "google_assistant",
+            "willflixhome"
+          ]
+        ],
+        "manufacturer": "Google",
+        "model": "Google Assistant",
+        "name_by_user": null,
+        "name": "willflixhome",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "dd65790671ad50c33b39d40a0a455572",
+        "identifiers": [
+          [
+            "BlueIris",
+            "BlueIris Cameras Server"
+          ]
+        ],
+        "manufacturer": "BlueIris",
+        "model": "Server",
+        "name_by_user": null,
+        "name": "BlueIris Cameras Server",
+        "sw_version": "5.4.9.18",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "874819bf42afb6c786aafb3f5487a65f"
+        ],
+        "configuration_url": "https://home.sense.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "f891d0c72b558e4e28e4c8f87b357c95",
+        "identifiers": [
+          [
+            "sense",
+            47882
+          ]
+        ],
+        "manufacturer": "Sense Labs, Inc.",
+        "model": "Sense",
+        "name_by_user": null,
+        "name": "Sense 47882",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "hallway",
+        "config_entries": [
+          "66b4caec902d7413bee57d4f5184d9ae"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "fe93e4e593010da792d4f2ccde1381fb",
+        "identifiers": [
+          [
+            "nest",
+            "enterprises/f83d767c-c56c-49d2-9765-25d9c52c2482/devices/AVPHwEty_5zzPzKDOewmVkyi5aHfHLDyBgqeMYLPh_C5wyu45Pb3aGLufA7VArnInjM_cw3MbBGOwZ90q1yvr4h9VtieJA"
+          ]
+        ],
+        "manufacturer": "Google Nest",
+        "model": "Thermostat",
+        "name_by_user": null,
+        "name": "Hallway",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "colin_s_room",
+        "config_entries": [
+          "66b4caec902d7413bee57d4f5184d9ae"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "9fa4422bab698f1804306af3b9c3bb56",
+        "identifiers": [
+          [
+            "nest",
+            "enterprises/f83d767c-c56c-49d2-9765-25d9c52c2482/devices/AVPHwEsEouu4yyJwPcBkFU_gSt8Ti9l7v2NhnI6Ia7m38mUiVeynwCb0LgsYeJAVYoxpTJSgLPaf7zdYISVn4uNlM-dG-w"
+          ]
+        ],
+        "manufacturer": "Google Nest",
+        "model": "Camera",
+        "name_by_user": null,
+        "name": "Colin's Room",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "66b4caec902d7413bee57d4f5184d9ae"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "4e7782310670f448c76c600b1fb955a6",
+        "identifiers": [
+          [
+            "nest",
+            "enterprises/f83d767c-c56c-49d2-9765-25d9c52c2482/devices/AVPHwEskD_gUtpSR0o3_djKt5MPQQJgbPJt7Wj6r28pN5fYqGlkTGlpwBeZvsrYGzsqfZQqX_ff0o5gRKmXzMaT0Iwr9Ug"
+          ]
+        ],
+        "manufacturer": "Google Nest",
+        "model": "Doorbell",
+        "name_by_user": "Doorbell",
+        "name": "Camera",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517",
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": "http://10.0.0.72",
+        "connections": [
+          [
+            "mac",
+            "58:bf:25:a0:ab:bc"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "afe82bd63354970656cf22aa34846a6d",
+        "identifiers": [
+          [
+            "mqtt",
+            "espresense_bcaba0"
+          ]
+        ],
+        "manufacturer": "ESPresense (esp32)",
+        "model": "ESP32-D0WDQ6",
+        "name_by_user": "ESPresense Living Room",
+        "name": "ESPresense Living Room",
+        "sw_version": "v3.1.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517",
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": "http://10.0.0.73",
+        "connections": [
+          [
+            "mac",
+            "34:86:5d:3b:56:18"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "feb461597a3bdf08dce06d92db355ab6",
+        "identifiers": [
+          [
+            "mqtt",
+            "espresense_18563b"
+          ]
+        ],
+        "manufacturer": "ESPresense (esp32)",
+        "model": "ESP32-D0WDQ6",
+        "name_by_user": null,
+        "name": "ESPresense Office",
+        "sw_version": "v3.1.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": "server_room",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517",
+          "fb417ad2a600462e86dc9d58aeace047"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "24:a1:60:5c:2c:5c"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "c3e4c660ee0dc6527c7bb5a16a48df17",
+        "identifiers": [
+          [
+            "flo",
+            "dd86cbfe-9a93-4096-85ab-9905175f7691"
+          ]
+        ],
+        "manufacturer": "Flo by Moen",
+        "model": "puck_v1",
+        "name_by_user": "Water Heater Water Sensor",
+        "name": "Water heater",
+        "sw_version": "1.2.1",
+        "via_device_id": null
+      },
+      {
+        "area_id": "mariana_s_room",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517",
+          "fb417ad2a600462e86dc9d58aeace047"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "24:a1:60:5a:f8:3c"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "b6aba24c1e2345d88e86bda3cb7c7023",
+        "identifiers": [
+          [
+            "flo",
+            "0c947967-0501-42be-b0d3-f718489186ce"
+          ]
+        ],
+        "manufacturer": "Flo by Moen",
+        "model": "puck_v1",
+        "name_by_user": "Closet Water Sensor",
+        "name": "Closet",
+        "sw_version": "1.2.1",
+        "via_device_id": null
+      },
+      {
+        "area_id": "server_room",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517",
+          "fb417ad2a600462e86dc9d58aeace047"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "24:a1:60:5b:a5:98"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "027ac33734d077fc341e595ebf252026",
+        "identifiers": [
+          [
+            "flo",
+            "450dcc81-d421-4a43-9d84-928c2f82e96c"
+          ]
+        ],
+        "manufacturer": "Flo by Moen",
+        "model": "puck_v1",
+        "name_by_user": "French Drain Water Sensor",
+        "name": "French drain",
+        "sw_version": "1.2.1",
+        "via_device_id": null
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "f0:9f:c2:70:ad:b7"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "7e76aa09795b6ced676f0bfcc6278c20",
+        "identifiers": [],
+        "manufacturer": "Ubiquiti Networks",
+        "model": "U7PG2",
+        "name_by_user": null,
+        "name": "UAP-AC-Pro-Garage",
+        "sw_version": "6.2.44.14098",
+        "via_device_id": null
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "74:83:c2:12:5d:45"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "a52db4fa40a62b8528e6c8de8ed6745f",
+        "identifiers": [],
+        "manufacturer": "Ubiquiti Networks",
+        "model": "UHDIW",
+        "name_by_user": null,
+        "name": "UAP-IW-LivingRoom",
+        "sw_version": "6.2.44.14098",
+        "via_device_id": null
+      },
+      {
+        "area_id": "master_bedroom",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "74:83:c2:78:c9:6b"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "9e09a95bea02d2bc344992194c348bea",
+        "identifiers": [],
+        "manufacturer": "Ubiquiti Networks",
+        "model": "UHDIW",
+        "name_by_user": null,
+        "name": "UAP-IW-HD-Master",
+        "sw_version": "6.2.44.14098",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "71478700e522ec06d2c68af68f1dee81"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "c80c38caad1598132e528f36b3759443",
+        "identifiers": [
+          [
+            "mobile_app",
+            "20769642-03C7-4E66-B56B-51A4DE751F73"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "iPhone15,2",
+        "name_by_user": null,
+        "name": "Robin's iPhone",
+        "sw_version": "16.0.1",
+        "via_device_id": null
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "15ab38e631b74c6cd60000b88bec8974"
+        ],
+        "configuration_url": "https://ambientweather.net/dashboard/36a5b7b95efc0954c2903a9a6ce6ccc9",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "92a66bddf10a9b60f0debaaf320f752b",
+        "identifiers": [
+          [
+            "ambient_station",
+            "48:3F:DA:56:53:AF"
+          ]
+        ],
+        "manufacturer": "Ambient Weather",
+        "model": null,
+        "name_by_user": null,
+        "name": "Miraloma park weather",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "2a7178d61f326c6a641ccab1d47f7252"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "59cd060c7842b0b0aff2025dcf403600",
+        "identifiers": [
+          [
+            "mobile_app",
+            "119D8E48-2070-5E53-BAB0-9057F70808BA"
+          ]
+        ],
+        "manufacturer": "Apple",
+        "model": "MacBookPro15,2",
+        "name_by_user": null,
+        "name": "Hamilton",
+        "sw_version": "12.6.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "d5ffe75c916ba812b9c17bd95c0929fc"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "f8d95c16e6e6f2c95fb2c85ce7571410",
+        "identifiers": [
+          [
+            "ipp",
+            "6d4ff0ce-6b11-11d8-8020-f80d60e533e1"
+          ]
+        ],
+        "manufacturer": "Canon",
+        "model": "LBP612C/613C UFR II",
+        "name_by_user": null,
+        "name": "CNLBP612C/613C",
+        "sw_version": "02.29",
+        "via_device_id": null
+      },
+      {
+        "area_id": "mariana_s_room",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517",
+          "0da45edaae41539abc0da46c5bc1cc84"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "mac",
+            "d8:31:34:37:3b:92"
+          ],
+          [
+            "mac",
+            "d8:31:34:37:3b:93"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "4660X",
+        "id": "bcc8ecd86da236b8a556684cd1ccc253",
+        "identifiers": [
+          [
+            "roku",
+            "YJ00CG750097"
+          ]
+        ],
+        "manufacturer": "Roku",
+        "model": "Roku Ultra",
+        "name_by_user": null,
+        "name": "Roku Ultra",
+        "sw_version": "11.5.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "8ffba58a03777da8e598720da02b3946"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "e1f2fd595c730fa0d8a1949f4cd1975c",
+        "identifiers": [
+          [
+            "airvisual",
+            "g73pxfz89vb"
+          ]
+        ],
+        "manufacturer": "AirVisual",
+        "model": "30",
+        "name_by_user": null,
+        "name": "Home",
+        "sw_version": "Version KBG66F851.1826",
+        "via_device_id": null
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "4bf03a2b9994eb6e6ddd90138d0052e9"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "2.0",
+        "id": "272c794933abc48e93d76271a3d4f555",
+        "identifiers": [
+          [
+            "purpleair",
+            "10.0.0.98"
+          ],
+          [
+            "purpleair",
+            "fc:f5:c4:9c:ed:14"
+          ]
+        ],
+        "manufacturer": "Purple Air",
+        "model": "PA-I (10.0.0.98)",
+        "name_by_user": null,
+        "name": "PurpleAir Indoor Purple Air",
+        "sw_version": "7.02",
+        "via_device_id": null
+      },
+      {
+        "area_id": "master_bedroom",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517",
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": "http://10.0.0.74",
+        "connections": [
+          [
+            "mac",
+            "30:c6:f7:29:a6:10"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "84e6b9bb50dc8dedf3fd4d25e8ca6418",
+        "identifiers": [
+          [
+            "mqtt",
+            "espresense_10a629"
+          ]
+        ],
+        "manufacturer": "ESPresense (esp32)",
+        "model": "ESP32-D0WDQ6",
+        "name_by_user": null,
+        "name": "ESPresense Master Bedroom",
+        "sw_version": "v3.1.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": "kitchen",
+        "config_entries": [
+          "a611df29888b88dd58f455a6cefe2517",
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": "http://10.0.0.75",
+        "connections": [
+          [
+            "mac",
+            "30:c6:f7:99:0a:70"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "e5857859daba7f549ca1d2cdbc0e162f",
+        "identifiers": [
+          [
+            "mqtt",
+            "espresense_700a99"
+          ]
+        ],
+        "manufacturer": "ESPresense (esp32)",
+        "model": "ESP32-D0WDQ6",
+        "name_by_user": null,
+        "name": "ESPresense Kitchen",
+        "sw_version": "v3.1.0",
+        "via_device_id": null
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "4154ff651b88f33581fbcc9cd8090190",
+        "identifiers": [
+          [
+            "BlueIris",
+            "BlueIris Cameras Roof (roof)"
+          ]
+        ],
+        "manufacturer": "BlueIris",
+        "model": "Network IP Camera",
+        "name_by_user": null,
+        "name": "BlueIris Cameras Roof (roof)",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "cf51ab57adc3e61f58a0aa726c3d7d46",
+        "identifiers": [
+          [
+            "BlueIris",
+            "BlueIris Cameras Garage (garage)"
+          ]
+        ],
+        "manufacturer": "BlueIris",
+        "model": "Network IP Camera",
+        "name_by_user": null,
+        "name": "BlueIris Cameras Garage (garage)",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "843cc4dd984bcda50d812bf296272c5c",
+        "identifiers": [
+          [
+            "BlueIris",
+            "BlueIris Cameras Backyard (backyard)"
+          ]
+        ],
+        "manufacturer": "BlueIris",
+        "model": "Network IP Camera",
+        "name_by_user": null,
+        "name": "BlueIris Cameras Backyard (backyard)",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "bed0e1ce41020eda9234831e169e6192",
+        "identifiers": [
+          [
+            "BlueIris",
+            "BlueIris Cameras Upstairs (upstairs)"
+          ]
+        ],
+        "manufacturer": "BlueIris",
+        "model": "Network IP Camera",
+        "name_by_user": null,
+        "name": "BlueIris Cameras Upstairs (upstairs)",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "231da9dbd93cf89f2ec61dd16d65b486",
+        "identifiers": [
+          [
+            "BlueIris",
+            "BlueIris Cameras Downstairs (downstairs)"
+          ]
+        ],
+        "manufacturer": "BlueIris",
+        "model": "Network IP Camera",
+        "name_by_user": null,
+        "name": "BlueIris Cameras Downstairs (downstairs)",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "ceba56d8395bc2c3c668f4a2de77a5c1",
+        "identifiers": [
+          [
+            "BlueIris",
+            "BlueIris Cameras +All cameras (Index)"
+          ]
+        ],
+        "manufacturer": "BlueIris",
+        "model": "Camera Group",
+        "name_by_user": null,
+        "name": "BlueIris Cameras +All cameras (Index)",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "e8d31c5c7095c6b4a5c40a81faa43a9c"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "78c3c337df9ee8b131ff27d113791dee",
+        "identifiers": [
+          [
+            "twinkly",
+            "3AF143C2-F7FF-40E7-8905-C142C8A41F58"
+          ]
+        ],
+        "manufacturer": "LEDWORKS",
+        "model": "TWS400SPP",
+        "name_by_user": null,
+        "name": "Tree 1",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "823258694e7360a09a81d66fa72bd4ae"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "30f137a7666ff09d7933710ba5d5da20",
+        "identifiers": [
+          [
+            "twinkly",
+            "6585E374-1372-4523-94A2-69DDBDEED5FC"
+          ]
+        ],
+        "manufacturer": "LEDWORKS",
+        "model": "TWS400SPP",
+        "name_by_user": null,
+        "name": "Tree 2",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "3ad6d81e567bda30cd74909cb072cec8"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "c0889192c8aea5c6e7ea5692ab4bd415",
+        "identifiers": [
+          [
+            "twinkly",
+            "0F75954B-F320-4C56-9B83-DC7554379A3A"
+          ]
+        ],
+        "manufacturer": "LEDWORKS",
+        "model": "TWI190SPP",
+        "name_by_user": null,
+        "name": "Porch 1",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "af0f90f0d05bff21d4965013fc6415c0"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "48c941c66b3450d931867669981d741d",
+        "identifiers": [
+          [
+            "lutron_caseta",
+            42409902
+          ]
+        ],
+        "manufacturer": "Lutron Electronics Co., Inc",
+        "model": "PJ2-3BRL-GXX-X01 (Pico3ButtonRaiseLower)",
+        "name_by_user": null,
+        "name": "Unassigned Unnamed Pico Remote 8",
+        "sw_version": null,
+        "via_device_id": "a27f364fe1a46ba173ade9a1047586f0"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "e9d31374e5ef80c482ab4c3e2ebe7954"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "",
+        "id": "57d275f5067725885d50bb417c2b8b69",
+        "identifiers": [
+          [
+            "homekit_controller:accessory-id",
+            "AA:4A:8F:44:7C:D2:aid:1"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "g376437"
+          ]
+        ],
+        "manufacturer": "VELUX",
+        "model": "VELUX Gateway",
+        "name_by_user": null,
+        "name": "VELUX Gateway",
+        "sw_version": "110",
+        "via_device_id": null
+      },
+      {
+        "area_id": "second_bathroom",
+        "config_entries": [
+          "e9d31374e5ef80c482ab4c3e2ebe7954"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "",
+        "id": "7a15d90ba24a2978d4f2abbb69633104",
+        "identifiers": [
+          [
+            "homekit_controller:accessory-id",
+            "AA:4A:8F:44:7C:D2:aid:2"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "531c592613170176"
+          ]
+        ],
+        "manufacturer": "VELUX",
+        "model": "VELUX Window",
+        "name_by_user": "Second Bathroom Skylight",
+        "name": "VELUX Window",
+        "sw_version": "12",
+        "via_device_id": "57d275f5067725885d50bb417c2b8b69"
+      },
+      {
+        "area_id": "master_bedroom",
+        "config_entries": [
+          "e9d31374e5ef80c482ab4c3e2ebe7954"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "",
+        "id": "51c4403df3b185cd85d53db38effa5b6",
+        "identifiers": [
+          [
+            "homekit_controller:serial-number",
+            "531c592613170180"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "AA:4A:8F:44:7C:D2:aid:3"
+          ]
+        ],
+        "manufacturer": "VELUX",
+        "model": "VELUX Window",
+        "name_by_user": "Master Bathroom Skylight",
+        "name": "VELUX Window",
+        "sw_version": "12",
+        "via_device_id": "57d275f5067725885d50bb417c2b8b69"
+      },
+      {
+        "area_id": "hallway",
+        "config_entries": [
+          "e9d31374e5ef80c482ab4c3e2ebe7954"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "",
+        "id": "997fc1249697888e02362358ffd36af7",
+        "identifiers": [
+          [
+            "homekit_controller:accessory-id",
+            "AA:4A:8F:44:7C:D2:aid:4"
+          ],
+          [
+            "homekit_controller:serial-number",
+            "531c5926122100a1"
+          ]
+        ],
+        "manufacturer": "VELUX",
+        "model": "VELUX Window",
+        "name_by_user": "Hallway Skylight",
+        "name": "VELUX Window",
+        "sw_version": "12",
+        "via_device_id": "57d275f5067725885d50bb417c2b8b69"
+      },
+      {
+        "area_id": "kitchen",
+        "config_entries": [
+          "e9d31374e5ef80c482ab4c3e2ebe7954"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "",
+        "id": "794c6d31b07af1b4641103ba518aef18",
+        "identifiers": [
+          [
+            "homekit_controller:serial-number",
+            "531c5926122d0159"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "AA:4A:8F:44:7C:D2:aid:6"
+          ]
+        ],
+        "manufacturer": "VELUX",
+        "model": "VELUX Window",
+        "name_by_user": "Rear Skylight",
+        "name": "VELUX Window",
+        "sw_version": "12",
+        "via_device_id": "57d275f5067725885d50bb417c2b8b69"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "e9d31374e5ef80c482ab4c3e2ebe7954"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": "",
+        "id": "e5106b6efb247abc398d5e76c006532d",
+        "identifiers": [
+          [
+            "homekit_controller:serial-number",
+            "531c59261303034e"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "AA:4A:8F:44:7C:D2:aid:7"
+          ]
+        ],
+        "manufacturer": "VELUX",
+        "model": "VELUX Window",
+        "name_by_user": "Front Skylight",
+        "name": "VELUX Window",
+        "sw_version": "12",
+        "via_device_id": "57d275f5067725885d50bb417c2b8b69"
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "59c3328eb9eae361eb26f327fc41a127"
+        ],
+        "configuration_url": null,
+        "connections": [
+          [
+            "upnp",
+            "uuid:Insight-1_0-231701K1200144"
+          ]
+        ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "af31ad2f1c7b771d6d55e2c60e9040b7",
+        "identifiers": [
+          [
+            "wemo",
+            "231701K1200144"
+          ]
+        ],
+        "manufacturer": "Belkin",
+        "model": "Insight",
+        "name_by_user": null,
+        "name": "Bike Charger",
+        "sw_version": "WeMo_WW_2.00.11408.PVT-OWRT-InsightV2",
+        "via_device_id": null
+      },
+      {
+        "area_id": "outside",
+        "config_entries": [
+          "1dae84dca4ec07f16b66c17af13568de"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "d80747eaf38ea44507b791fecc0a8bec",
+        "identifiers": [
+          [
+            "twinkly",
+            "90370E8C-A161-4B55-A565-240A53DF1B12"
+          ]
+        ],
+        "manufacturer": "LEDWORKS",
+        "model": "TWI190SPP",
+        "name_by_user": null,
+        "name": "Porch 2",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "2599d09293b08121123b20ab90c52a65",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x282c02bfffe860d4"
+          ]
+        ],
+        "manufacturer": "Third Reality",
+        "model": "Door sensor (3RDS17BZ)",
+        "name_by_user": null,
+        "name": "Porch Door sensor",
+        "sw_version": "v1.00.24",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "194a7876ea1de9fefe2e7a7e2d591a06",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d0008071a09"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara temperature, humidity and pressure sensor (WSDCGQ11LM)",
+        "name_by_user": null,
+        "name": "Shower sensor",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "15722f35cebb0e986a52f21a5e496b55",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00078ea084"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara human body movement and illuminance sensor (RTCGQ11LM)",
+        "name_by_user": "Dining Room motion sensor",
+        "name": "Dining Room Motion Sensor",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "5c41a1e201f5978d21e8a759d522b18f",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d000802a779"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Mi/Aqara smart home cube (MFKZQ01LM)",
+        "name_by_user": null,
+        "name": "Magic Cube",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "d15d4649d9dfd544a36abe6a4df4c85c"
+        ],
+        "configuration_url": "http://accuweather.com/en/_/_/2628230/weather-forecast/2628230/",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "6899c89e2be48a94bc8cf2bb0cd6fff7",
+        "identifiers": [
+          [
+            "accuweather",
+            "2628230"
+          ]
+        ],
+        "manufacturer": "AccuWeather, Inc.",
+        "model": null,
+        "name_by_user": null,
+        "name": "Home",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "7f355fd3a96615a2b094741ce9334ac7",
+          "495f0199266d622f97095bce0675b364"
+        ],
+        "configuration_url": "https://www.waze.com",
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "8690a64b286133809c49499c18770841",
+        "identifiers": [
+          [
+            "waze_travel_time",
+            "waze_travel_time"
+          ]
+        ],
+        "manufacturer": null,
+        "model": null,
+        "name_by_user": null,
+        "name": "Waze",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "office",
+        "config_entries": [
+          "729297a4fd59e410c3959946a9b0a7f5",
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "521b72b73f77f394c1351b0e06fd1738",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x2c1165fffebae6c6"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "TRADFRI control outlet (E1603/E1702/E1708)",
+        "name_by_user": null,
+        "name": "Tradfri A",
+        "sw_version": "2.0.024",
+        "via_device_id": null
+      },
+      {
+        "area_id": "living_room",
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "806372cd881f8ed19f59f2ad6418cb76",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x385b44fffee32757"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "TRADFRI control outlet (E1603/E1702/E1708)",
+        "name_by_user": null,
+        "name": "Tradfri B",
+        "sw_version": "2.0.024",
+        "via_device_id": null
+      },
+      {
+        "area_id": "garage",
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "4fbad7b9c88a03c0d43298dc283e908c",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x2c1165fffebe9bc2"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "TRADFRI control outlet (E1603/E1702/E1708)",
+        "name_by_user": null,
+        "name": "Tradfri C",
+        "sw_version": "2.0.024",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "068428fa5db095be7712f02219afffe6",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x385b44fffee755e6"
+          ]
+        ],
+        "manufacturer": "IKEA",
+        "model": "TRADFRI control outlet (E1603/E1702/E1708)",
+        "name_by_user": null,
+        "name": "Tradfri D",
+        "sw_version": "2.0.024",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "375fc09253a72a697e3d8a0fe008e61d",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00079004ab"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara human body movement and illuminance sensor (RTCGQ11LM)",
+        "name_by_user": null,
+        "name": "Living Room motion sensor",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "a42a0ae5e3b19befe1a73f80facf58a4",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d0007901533"
+          ]
+        ],
+        "manufacturer": "Xiaomi",
+        "model": "Aqara human body movement and illuminance sensor (RTCGQ11LM)",
+        "name_by_user": null,
+        "name": "Kitchen motion sensor",
+        "sw_version": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "df499b96b4b6048adffb2f2ee4bee707",
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00124b0022419485"
+          ]
+        ],
+        "manufacturer": "eWeLink",
+        "model": "Zigbee smart plug (SA-003-Zigbee)",
+        "name_by_user": null,
+        "name": "Round Plug",
+        "sw_version": "1.0.3",
+        "via_device_id": null
+      }
+    ],
+    "deleted_devices": [
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "homekit_controller:serial-number",
+            "0E:2D:E8:5E:57:3D"
+          ],
+          [
+            "homekit_controller:accessory-id",
+            "0E:2D:E8:5E:57:3D:aid:1"
+          ]
+        ],
+        "id": "131f3805a9679fdddca541a144d7bdd9",
+        "orphaned_timestamp": 1667076551.5435188
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "03:76:80:3a:02:f0"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "afe8d84e8d87200671af2208e2de0101",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "bdb063dc9eca5d7a34970810c6049dd0",
+        "orphaned_timestamp": 1667076971.536011
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "f6:eb:05:ba:ba:54"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "ce2f05ce514910d10b5ab9d745c249d2",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "468c85996961966d11ac6bc3639aa2c7",
+        "orphaned_timestamp": 1667076977.3105295
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "a7:9f:47:6b:7f:85"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "75072df25ce6767339b7b49ae3529496",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "a0018caaad5bb311ac04fc9cca8b2197",
+        "orphaned_timestamp": 1667076982.3821108
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "c1:0e:26:ab:f9:8f"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "e699132ae19962b9e1bbe2bed85dab70",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "a3987e6dcd5eeb8f95dc478caa8407a8",
+        "orphaned_timestamp": 1667076986.5173662
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "8a:dc:67:6f:d2:9d"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "1ede0fcb8818ed2de6249ec0f6de7dca",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "5338afe7933cb197ac30b2057d4cff48",
+        "orphaned_timestamp": 1667076990.1594386
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "ee:35:0b:c3:f8:72"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "72110516190af07b2fe79f49d851f6bf",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "0270fe2516f2206948019633e20e36ca",
+        "orphaned_timestamp": 1667076994.6065307
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "89:f4:2a:f4:25:d1"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "0d94458d479159c7430c4f78ce0946bd",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "55ac86635814983ad83f3e4636ee46e0",
+        "orphaned_timestamp": 1667076998.1482542
+      },
+      {
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "BlueIris",
+            "Willflix +All cameras (Index)"
+          ]
+        ],
+        "id": "96ae47cbc71f20d4deb7cdffd2a4fd36",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "BlueIris",
+            "Willflix +All cameras cycle (@Index)"
+          ]
+        ],
+        "id": "ed581ececd664f774f6ab80c34bf31b5",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "BlueIris",
+            "Willflix Roof (roof)"
+          ]
+        ],
+        "id": "24e086eaea4c71e9e07491d67a566638",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "BlueIris",
+            "Willflix Garage (garage)"
+          ]
+        ],
+        "id": "5f38290c83c08923b16e12882f7ff472",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "BlueIris",
+            "Willflix Backyard (backyard)"
+          ]
+        ],
+        "id": "9813d8d5becbd6518e69e5f27d00d760",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "BlueIris",
+            "Willflix Upstairs (upstairs)"
+          ]
+        ],
+        "id": "e04d441697f2cb0192a27334365ec20c",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "BlueIris",
+            "Willflix Downstairs (downstairs)"
+          ]
+        ],
+        "id": "350bcbc586800874b5665c8017d3dfe5",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "BlueIris",
+            "Willflix Server"
+          ]
+        ],
+        "id": "b88cb37836b7e40077fe51a3df48a8fb",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "d9b9b286fba34a9679f91f894e861321"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "BlueIris",
+            "BlueIris Cameras +All cameras cycle (@Index)"
+          ]
+        ],
+        "id": "a1a375272a4c4ff3049a74a67e871b0b",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "f8:b3:7e:61:8b:c9"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "553d6c3036cd1b88e2b50891573dbb2c",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "209e772b25fe13b0dc68e666c401cea0",
+        "orphaned_timestamp": 1667345655.1874397
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "mac",
+            "57:9d:3e:f9:41:a9"
+          ]
+        ],
+        "identifiers": [
+          [
+            "homekit",
+            "f38085c896f30faad0dd9933dbadf542",
+            "homekit.bridge"
+          ]
+        ],
+        "id": "9b79526a928969c4a47dcfa5b37b88f3",
+        "orphaned_timestamp": 1667345667.2233906
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "smartthings",
+            "a0fe35e8-7b93-4aa6-84a8-5b0b507e5d0b"
+          ]
+        ],
+        "id": "ad78a312fd8688092bbcb991b45ab723",
+        "orphaned_timestamp": 1667709386.8960192
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "smartthings",
+            "8ee189f7-6d48-4ba8-a167-59541033aa18"
+          ]
+        ],
+        "id": "382eb061cdaaffca6d1831a16f46d2dc",
+        "orphaned_timestamp": 1667709386.8960192
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "smartthings",
+            "0a55d449-a805-4ffd-95bd-25af8abac6f1"
+          ]
+        ],
+        "id": "033582410b97dfe037d6998c5e300f81",
+        "orphaned_timestamp": 1667709386.8960192
+      },
+      {
+        "config_entries": [],
+        "connections": [],
+        "identifiers": [
+          [
+            "smartthings",
+            "090d5f51-f2e0-48af-9652-4e38d851d403"
+          ]
+        ],
+        "id": "675aab8455202d0691e953f266f3d793",
+        "orphaned_timestamp": 1667709386.8960192
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "zigbee",
+            "e0:79:8d:ff:fe:88:45:0a"
+          ]
+        ],
+        "identifiers": [
+          [
+            "zha",
+            "e0:79:8d:ff:fe:88:45:0a"
+          ]
+        ],
+        "id": "25bd7d6801b6e8b7668391ed0d9a61d1",
+        "orphaned_timestamp": 1667711253.3375478
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "zigbee",
+            "00:15:8d:00:08:07:1a:09"
+          ]
+        ],
+        "identifiers": [
+          [
+            "zha",
+            "00:15:8d:00:08:07:1a:09"
+          ]
+        ],
+        "id": "48dcfbc3e7f567af4aae79c4c9b5d75b",
+        "orphaned_timestamp": 1667711253.3375478
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "zigbee",
+            "00:15:8d:00:07:8e:a0:84"
+          ]
+        ],
+        "identifiers": [
+          [
+            "zha",
+            "00:15:8d:00:07:8e:a0:84"
+          ]
+        ],
+        "id": "9e2b13590fd62203c25ea5a7877a7f46",
+        "orphaned_timestamp": 1667711253.3375478
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "zigbee",
+            "28:2c:02:bf:ff:e8:60:d4"
+          ]
+        ],
+        "identifiers": [
+          [
+            "zha",
+            "28:2c:02:bf:ff:e8:60:d4"
+          ]
+        ],
+        "id": "aa5993676334009a9ed98b24b8098ece",
+        "orphaned_timestamp": 1667711253.3375478
+      },
+      {
+        "config_entries": [],
+        "connections": [
+          [
+            "zigbee",
+            "00:15:8d:00:08:02:a7:79"
+          ]
+        ],
+        "identifiers": [
+          [
+            "zha",
+            "00:15:8d:00:08:02:a7:79"
+          ]
+        ],
+        "id": "d4a1e1e57564cb5e90b0738c15c7af17",
+        "orphaned_timestamp": 1667711253.3375478
+      },
+      {
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d00022275fb"
+          ]
+        ],
+        "id": "77ba8b56fb68180855317fe585487ea2",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "a79bd273cebfeeabc66cb66965f11eb6"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "mqtt",
+            "zigbee2mqtt_0x00158d0002c589ab"
+          ]
+        ],
+        "id": "299b70fda0ac47761f5f509aa1981186",
+        "orphaned_timestamp": null
+      }
+    ]
+  }
+}

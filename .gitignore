@@ -6,7 +6,7 @@
 *.db-shm
 nest/event_media/
 # Ignore folders.
-.storage
+#.storage
 .cloud
 .google.token
 

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_boolean",
+  "data": {
+    "items": [
+      {
+        "name": "House Guest",
+        "icon": "mdi:home-floor-g",
+        "id": "house_guest"
+      },
+      {
+        "id": "minimalist_dropdown",
+        "name": "minimalist_welcome_toggle"
+      }
+    ]
+  }
+}

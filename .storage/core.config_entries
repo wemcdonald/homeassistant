@@ -1,0 +1,1286 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.config_entries",
+  "data": {
+    "entries": [
+      {
+        "entry_id": "8d9e4c40982cf6b8bed419897cd2db6d",
+        "version": 1,
+        "domain": "sun",
+        "title": "Sun",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "import",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "4e86185bd8d9f7a888e1701d0ad6588f",
+        "version": 1,
+        "domain": "cast",
+        "title": "Google Cast",
+        "data": {
+          "ignore_cec": [],
+          "known_hosts": [],
+          "uuid": [],
+          "user_id": "767734774c9140709c5a543aeef6be96"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "zeroconf",
+        "unique_id": "cast",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "9b0fb1739054ad394736c4f29a9cdb66",
+        "version": 1,
+        "domain": "met",
+        "title": "Weather Forecast",
+        "data": {
+          "track_home": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "onboarding",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "23ac20a3b0ac16870c9edb04c4ac49d0",
+        "version": 1,
+        "domain": "radio_browser",
+        "title": "Radio Browser",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "onboarding",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "af0f90f0d05bff21d4965013fc6415c0",
+        "version": 1,
+        "domain": "lutron_caseta",
+        "title": "Lutron Hub",
+        "data": {
+          "host": "10.0.0.80",
+          "keyfile": "lutron_caseta-01e85a75-key.pem",
+          "certfile": "lutron_caseta-01e85a75-cert.pem",
+          "ca_certs": "lutron_caseta-01e85a75-ca.pem"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "homekit",
+        "unique_id": "01e85a75",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a991907c518fbf99fe68f123727ba385",
+        "version": 1,
+        "domain": "tradfri",
+        "title": "Ikea Hub",
+        "data": {
+          "host": "10.0.0.187",
+          "identity": "deff5f4f82b5416ebeaf344479d06679",
+          "key": "JeBxuoyl60KvLSpe",
+          "gateway_id": "7e5175520440005b"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "homekit",
+        "unique_id": "9E:AB:8B:81:FB:8D",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "2d907ca1b2be5c8353a4f72962e1bf22",
+        "version": 1,
+        "domain": "mobile_app",
+        "title": "Will's iPhone HA",
+        "data": {
+          "device_name": "Will's iPhone 14 Pro",
+          "app_version": "2022.10.1 (2022.424)",
+          "supports_encryption": true,
+          "device_id": "9554C536-C996-4CA3-9F86-CD69A4581204",
+          "model": "iPhone15,2",
+          "os_name": "iOS",
+          "os_version": "16.1",
+          "app_name": "Home Assistant",
+          "app_id": "io.robbie.HomeAssistant",
+          "manufacturer": "Apple",
+          "app_data": {
+            "push_token": "erA8KU5dJUfDm6LCXFBPKY:APA91bEf37HhE1Y7VDyJiQjdcdjhyC4Rwzwq2p2R6eXxj1CmQuYKQsn8O0e4U7y1sqsQwnibmSvOgnUbC2rqSkLTUH2VMVgkG-HXCLWZxlKO6yJdpZiPHo7krejubyapilgPgRLxwRTd",
+            "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+          },
+          "webhook_id": "928094353c49c5ba3d8d3cde41ccc67f9a1875496ccffa0a9ec5fdb13f6df379",
+          "secret": "53a71874a0cc9084a278368b030fb28f7bfcdef0959267020ef2b1517e9686cc",
+          "user_id": "9862e66b478646119b91edb35265ecbd",
+          "no_legacy_encryption": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "registration",
+        "unique_id": "io.robbie.HomeAssistant-9554C536-C996-4CA3-9F86-CD69A4581204",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a79bd273cebfeeabc66cb66965f11eb6",
+        "version": 1,
+        "domain": "mqtt",
+        "title": "Mosquitto MQTT",
+        "data": {
+          "broker": "127.0.0.1",
+          "port": 1883,
+          "discovery": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "97861a4d59d556c5f1023fd253664bc9",
+        "version": 1,
+        "domain": "myq",
+        "title": "MyQ",
+        "data": {
+          "username": "wemcdonald@gmail.com",
+          "password": "JpHVE4T8"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "dhcp",
+        "unique_id": "wemcdonald@gmail.com",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "d31725ac042896a388f8a35589ba18f9",
+        "version": 1,
+        "domain": "hacs",
+        "title": "",
+        "data": {
+          "token": "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"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "d9b9b286fba34a9679f91f894e861321",
+        "version": 1,
+        "domain": "blueiris",
+        "title": "BlueIris Cameras",
+        "data": {
+          "host": "10.0.0.35",
+          "port": "81",
+          "ssl": false,
+          "username": "ha",
+          "password": "gAAAAABjXsZ012ywe6c4VLF8rMUEUCp2TafVZyh-esoU-NIFzan3JvQ4FZRoxrem7a7QU3Cxhn7ddn_RTC6uCoT0Et75iIGPZQ=="
+        },
+        "options": {
+          "stream-type": "H264",
+          "support_stream": false,
+          "log_level": "Default",
+          "allowed_camera": [
+            "Index",
+            "roof",
+            "garage",
+            "backyard",
+            "upstairs",
+            "downstairs"
+          ],
+          "allowed_connectivity_sensor": [],
+          "allowed_audio_sensor": [],
+          "allowed_motion_sensor": [
+            "roof",
+            "garage",
+            "backyard",
+            "upstairs",
+            "downstairs"
+          ],
+          "allowed_dio_sensor": [],
+          "allowed_external_sensor": [],
+          "allowed_profile": [
+            "1",
+            "2"
+          ],
+          "allowed_schedule": [
+            "0",
+            "1",
+            "2"
+          ]
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "59c3328eb9eae361eb26f327fc41a127",
+        "version": 1,
+        "domain": "wemo",
+        "title": "Wemo",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "wemo",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "3f2f05ee98bd1aaf7fe84a4f153b62d0",
+        "version": 1,
+        "domain": "tesla_custom",
+        "title": "Tesla",
+        "data": {
+          "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im5ZdVZJWTJTN3gxVHRYM01KMC1QMDJad3pXQSJ9.eyJpc3MiOiJodHRwczovL2F1dGgudGVzbGEuY29tL29hdXRoMi92MyIsImF1ZCI6Imh0dHBzOi8vYXV0aC50ZXNsYS5jb20vb2F1dGgyL3YzL3Rva2VuIiwiaWF0IjoxNjY3MDgwMzM5LCJzY3AiOlsib3BlbmlkIiwib2ZmbGluZV9hY2Nlc3MiXSwiZGF0YSI6eyJ2IjoiMSIsImF1ZCI6Imh0dHBzOi8vb3duZXItYXBpLnRlc2xhbW90b3JzLmNvbS8iLCJzdWIiOiJjMGI2ZGZkYi01MmQ0LTRjNjAtOTA3NS04MGY3N2ExNzI2ZDgiLCJzY3AiOlsib3BlbmlkIiwiZW1haWwiLCJvZmZsaW5lX2FjY2VzcyJdLCJhenAiOiJvd25lcmFwaSIsImFtciI6WyJwd2QiXSwiYXV0aF90aW1lIjoxNjY3MDgwMzM5fX0.U488uLpLqbm968FhO_JQrbStvFXAilV6ZBMGXIwtk9fifeZE6NduIHElYbpcPC5oKVY67aWASkhWljuPKl1Szf97V_An7WZgXGNk8IIH9kmViMosR9c1MnY5hDDFIuhDFsp8WMW9ttYr6Gj8-fAJmcZWdTKU4xS7s-7eSWx6SPUkQrU4A3A38ArLedIR33LGZTZH2oJxspMzrno_3ec_eoHOJSNeJiQIWvm2ra9HzblZ_jlIgrdYK-0H-hg1ECDd2skPePZ4GjF_FX7Qcb8mlpxUFhDXEaxNEKwLsxlRgcKzXr191RgwxQf5r8_Fi0NyAlg69z5x6CX9WeUp-N1JpQ",
+          "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im5ZdVZJWTJTN3gxVHRYM01KMC1QMDJad3pXQSJ9.eyJpc3MiOiJodHRwczovL2F1dGgudGVzbGEuY29tL29hdXRoMi92MyIsImF1ZCI6WyJodHRwczovL293bmVyLWFwaS50ZXNsYW1vdG9ycy5jb20vIiwiaHR0cHM6Ly9hdXRoLnRlc2xhLmNvbS9vYXV0aDIvdjMvdXNlcmluZm8iXSwiYXpwIjoib3duZXJhcGkiLCJzdWIiOiJjMGI2ZGZkYi01MmQ0LTRjNjAtOTA3NS04MGY3N2ExNzI2ZDgiLCJzY3AiOlsib3BlbmlkIiwiZW1haWwiLCJvZmZsaW5lX2FjY2VzcyJdLCJhbXIiOlsicHdkIl0sImV4cCI6MTY2ODAzNTM3MywiaWF0IjoxNjY4MDA2NTczLCJhdXRoX3RpbWUiOjE2NjcwODAzMzl9.Q9d5tta1gNAhxJgA-zcTnfimIUsryUqQOTPfGriCrlGH_ciL9ZI_jL4EL9yISn-CkGFprHwLzsO4DIL0nyzfPVIGHqh3uJMwe4zcP2Nv6fV4aoxGDICxGewqlUU1GCxw69Q3VPxi9dKzjnHdOJjvgOAQRoZav2UXLY3JNrImXojQ3_tt4CR_y6--UhVHZ1jhaQcIEGb3Wctui7AVrUBQQminIAt_sT6GEtx5YLzrs2r8OEQrHwrrQ--HNG-alZL1A9sAmeDD5j1JTAbmsJsilMNYE1FahsYMNCIzoQej_VgVsuu9fsR0CmMGTtEkJLYLaZB1rSAgY9UZjALI7_9XzQ",
+          "expiration": 1668006573,
+          "username": "wemcdonald@gmail.com",
+          "domain": "https://auth.tesla.com",
+          "include_vehicles": true,
+          "include_energysites": true,
+          "initial_setup": false
+        },
+        "options": {
+          "scan_interval": 660,
+          "enable_wake_on_start": true,
+          "polling_policy": "connected"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a52b0c8bb1e59fcf6f92e98a4aa43280",
+        "version": 1,
+        "domain": "google_assistant",
+        "title": "Google Assistant (voice)",
+        "data": {
+          "project_id": "willflixhome"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "import",
+        "unique_id": "willflixhome",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "874819bf42afb6c786aafb3f5487a65f",
+        "version": 1,
+        "domain": "sense",
+        "title": "Sense",
+        "data": {
+          "email": "wemcdonald@gmail.com",
+          "password": "Flyingleap1",
+          "timeout": 10,
+          "access_token": "t1.19061.18992.624751ea81972c1c095fa19a700a8042bae4156150362af44929189bdacc6dd5",
+          "user_id": 19061,
+          "monitor_id": 47882
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "wemcdonald@gmail.com",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "66b4caec902d7413bee57d4f5184d9ae",
+        "version": 1,
+        "domain": "nest",
+        "title": "Nest",
+        "data": {
+          "sdm": {},
+          "cloud_project_id": "willflixhome",
+          "project_id": "f83d767c-c56c-49d2-9765-25d9c52c2482",
+          "auth_implementation": "nest_216974275718_bc8t4r1gb14lmn39bqorautc3tf7nefd_apps_googleusercontent_com",
+          "token": {
+            "access_token": "ya29.a0AeTM1ieWje9i1S8THsZ0nsKzTS6YBPPtC6dqtEnmGamjTpQoSz_j61QPO3oyTopTeBs2eO2a-yXPcYICxKw_FwyAcP_lewUiTiU9pb8IRIrdmqA8bsgYSioQsnKaxiNxx8z9g-sdtbrX33NYuw_8vkBYuFN9ZAaCgYKAQUSARISFQHWtWOmzBUizMbV2IEBjfjoVFPEsg0165",
+            "expires_in": 3599,
+            "refresh_token": "1//06QnxvrfJ45CCCgYIARAAGAYSNwF-L9Irg6J7Y581X0lmnfjqY7inU6ezfGUPQxxFzVJMkm7xnXuqA93OXCtlVKrh-HPgMYkAG9A",
+            "scope": "https://www.googleapis.com/auth/sdm.service https://www.googleapis.com/auth/pubsub",
+            "token_type": "Bearer",
+            "expires_at": 1668022801.7460518
+          },
+          "subscriber_id": "projects/willflixhome/subscriptions/home-assistant-O25ltWBRAv"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "f83d767c-c56c-49d2-9765-25d9c52c2482",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "fb417ad2a600462e86dc9d58aeace047",
+        "version": 1,
+        "domain": "flo",
+        "title": "Flo Water Sensors",
+        "data": {
+          "username": "wemcdonald@gmail.com",
+          "password": "v@afUuQ8GsT9@JGY"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "wemcdonald@gmail.com",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a611df29888b88dd58f455a6cefe2517",
+        "version": 1,
+        "domain": "unifi",
+        "title": "Unifi Network",
+        "data": {
+          "host": "127.0.0.1",
+          "username": "wemcdonald",
+          "password": "7#83bkhyJD*ds&bS",
+          "port": 8443,
+          "verify_ssl": false,
+          "site": "default",
+          "controller": {
+            "host": "127.0.0.1",
+            "username": "wemcdonald",
+            "password": "7#83bkhyJD*ds&bS",
+            "port": 8443,
+            "verify_ssl": false,
+            "site": "default"
+          }
+        },
+        "options": {
+          "block_client": [],
+          "track_clients": true,
+          "track_wired_clients": false,
+          "track_devices": true,
+          "ssid_filter": [
+            "AmalfiCoast"
+          ],
+          "detection_time": 300,
+          "ignore_wired_bug": false,
+          "poe_clients": false,
+          "dpi_restrictions": false,
+          "allow_bandwidth_sensors": false,
+          "allow_uptime_sensors": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "62f52eb94b1cb43d39cbdb62",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "71478700e522ec06d2c68af68f1dee81",
+        "version": 1,
+        "domain": "mobile_app",
+        "title": "Robin's iPhone",
+        "data": {
+          "supports_encryption": true,
+          "app_version": "2022.10.1 (2022.424)",
+          "device_id": "20769642-03C7-4E66-B56B-51A4DE751F73",
+          "app_id": "io.robbie.HomeAssistant",
+          "os_version": "16.0.1",
+          "app_data": {
+            "push_token": "ecE7ZAz6o0JWhkPkAefXHg:APA91bGuKpxnn7HTm66zK-QuM0eLQiNFluSxKfyOP1m_H1DXRyRrZEJ4Uw7HTzHUP0-K_s8SrjTO8tJrkL1xNNeIV8ysTCTvQhuAxXediIFGwpA82c_W2z_KU8_4TU5k7LU2vbPejFLM",
+            "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+          },
+          "device_name": "Robin's iPhone",
+          "os_name": "iOS",
+          "manufacturer": "Apple",
+          "app_name": "Home Assistant",
+          "model": "iPhone15,2",
+          "webhook_id": "ca150b685cf0fd5a3d607cee8535475806cabad8549efe1b500f498c76a69e1d",
+          "secret": "58355fb21c6f9140f169916082a097a478ff52c5c55751a6a73cac803e0adfc2",
+          "user_id": "5e338293bb29461aa2fc0cbd2640302b",
+          "no_legacy_encryption": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "registration",
+        "unique_id": "io.robbie.HomeAssistant-20769642-03C7-4E66-B56B-51A4DE751F73",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "15ab38e631b74c6cd60000b88bec8974",
+        "version": 2,
+        "domain": "ambient_station",
+        "title": "Weather Station",
+        "data": {
+          "api_key": "3ee54c75b8dc42158768963993c2f3936d643f2832974cea94e35f08d275cab5",
+          "app_key": "38a3c2efae3249c6a2eac0de0513ddc68371f7ed7eaf4d17a9501947739ed0d7"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "38a3c2efae3249c6a2eac0de0513ddc68371f7ed7eaf4d17a9501947739ed0d7",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "2a7178d61f326c6a641ccab1d47f7252",
+        "version": 1,
+        "domain": "mobile_app",
+        "title": "Hamilton",
+        "data": {
+          "os_name": "macOS",
+          "app_data": {
+            "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification",
+            "push_token": "c3gs_NfGsEzhnvbAyMH3K6:APA91bHtUlwEeLAXgjUbwSTC0ZOHBHRkFzQRwQxw1SgOD0twQ2CaOOobCPmR0sSt4iwlPMo1BFl3Cw8qxnB2Tj9hO9wXPpYvl8RejxiD4_zvgDQqP8fxvwhAlWmBkJb139JBHtqvSF3d"
+          },
+          "device_name": "Hamilton",
+          "manufacturer": "Apple",
+          "app_version": "2022.10.1 (2022.424)",
+          "app_name": "Home Assistant",
+          "device_id": "119D8E48-2070-5E53-BAB0-9057F70808BA",
+          "model": "MacBookPro15,2",
+          "os_version": "12.6.0",
+          "app_id": "io.robbie.HomeAssistant",
+          "supports_encryption": true,
+          "webhook_id": "e862c40235944ff9a9cd94ecae0b1a37bd6aed5167360a2d409ab395b4f4f06e",
+          "secret": "5f434ce924e3065943c3d2d1512bd70b66df681c3a7e49ab582f246c34b9459d",
+          "user_id": "9862e66b478646119b91edb35265ecbd",
+          "no_legacy_encryption": true
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "registration",
+        "unique_id": "io.robbie.HomeAssistant-119D8E48-2070-5E53-BAB0-9057F70808BA",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "d5ffe75c916ba812b9c17bd95c0929fc",
+        "version": 1,
+        "domain": "ipp",
+        "title": "Canon LBP612C/613C",
+        "data": {
+          "host": "10.0.0.143",
+          "port": 631,
+          "ssl": false,
+          "verify_ssl": false,
+          "base_path": "/ipp/print",
+          "name": "Canon LBP612C/613C",
+          "uuid": "6d4ff0ce-6b11-11d8-8020-f80d60e533e1"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "zeroconf",
+        "unique_id": "6d4ff0ce-6b11-11d8-8020-f80d60e533e1",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "0da45edaae41539abc0da46c5bc1cc84",
+        "version": 1,
+        "domain": "roku",
+        "title": "Roku Ultra",
+        "data": {
+          "host": "10.0.0.140",
+          "name": "Roku Ultra"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ssdp",
+        "unique_id": "YJ00CG750097",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "8ffba58a03777da8e598720da02b3946",
+        "version": 2,
+        "domain": "airvisual",
+        "title": "iQAir / Air Visual",
+        "data": {
+          "ip_address": "10.0.0.175",
+          "password": "mktcc4yu",
+          "integration_type": "AirVisual Node/Pro"
+        },
+        "options": {
+          "show_on_map": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "10.0.0.175",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "4bf03a2b9994eb6e6ddd90138d0052e9",
+        "version": 1,
+        "domain": "purpleair",
+        "title": "PurpleAir Indoor",
+        "data": {
+          "title": "PurpleAir Indoor",
+          "place": "inside",
+          "id": "fc:f5:c4:9c:ed:14",
+          "ip_address": "10.0.0.98",
+          "sw_version": "7.02",
+          "hw_version": "2.0",
+          "model": "PA-I",
+          "is_dual": false
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "fc:f5:c4:9c:ed:14",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "01869b70db50f49f48549cf62d89fb53",
+        "version": 1,
+        "domain": "dwains_dashboard",
+        "title": "",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "474e178974e81d72b5d71659b522ea6c",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Outside Backyard Lights",
+        "data": {},
+        "options": {
+          "entity_id": "switch.outside_backyard_lights",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "05f3d5930ccda6563e1da7e8a8211ca3",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Outside Downstairs Door",
+        "data": {},
+        "options": {
+          "entity_id": "switch.outside_downstairs_door",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b8e94a7b6e072cf802ec251634a18309",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Outside Upstairs Front Door",
+        "data": {},
+        "options": {
+          "entity_id": "switch.outside_upstairs_front_door",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "bbdc79b2cadcd2f782ca2033895d4701",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Will Desk Lamp",
+        "data": {},
+        "options": {
+          "entity_id": "switch.will_desk_lamp",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "304477d7e0adccce39ed8f10fc583540",
+        "version": 1,
+        "domain": "pyscript",
+        "title": "pyscript",
+        "data": {
+          "allow_all_imports": true,
+          "hass_is_global": true,
+          "apps": {
+            "willflix": {
+              "common": {
+                "default_notify": [
+                  "will"
+                ],
+                "notify_entities": {
+                  "will": "mobile_app_will_s_iphone_14_pro",
+                  "robin": "mobile_app_robin_s_iphone"
+                }
+              },
+              "garage_lights": {
+                "type": "master_switch",
+                "entities": {
+                  "masters": [
+                    "light.garage_main_lights"
+                  ],
+                  "slave_areas": [
+                    "garage"
+                  ]
+                }
+              },
+              "tesla": {
+                "times": [
+                  "once(18:00)",
+                  "once(21:00)"
+                ],
+                "entities": {
+                  "battery": "sensor.magneto_battery",
+                  "charger": "binary_sensor.magneto_charger",
+                  "wake_up": "button.magneto_wake_up"
+                },
+                "standard_threshold_percent": 40,
+                "low_threshold_percent": 20
+              },
+              "porch_door_left_open": {
+                "times": [
+                  "once(sunset)",
+                  "once(BEDTIME)"
+                ],
+                "entities": {
+                  "porch_door": "binary_sensor.porch_door_sensor"
+                },
+                "min_open_time_minutes": 10,
+                "notify": "will"
+              },
+              "bike_charger": {
+                "times": [
+                  "once(20:00)"
+                ],
+                "entities": {
+                  "charger": "sensor.bike_charger_current_power"
+                },
+                "min_power": 0.1,
+                "notify": [
+                  "will"
+                ]
+              }
+            }
+          },
+          "scenes": {
+            "all_turn_off": {
+              "turn_off": {
+                "areas": [
+                  "colin_s_room",
+                  "hallway",
+                  "kitchen",
+                  "living_room",
+                  "mariana_s_room",
+                  "master_bedroom",
+                  "office",
+                  "outside",
+                  "second_bathroom",
+                  "stairs"
+                ]
+              }
+            },
+            "bedtime": {
+              "turn_off": {
+                "areas": [
+                  "colin_s_room",
+                  "kitchen",
+                  "living_room",
+                  "outside",
+                  "second_bathroom",
+                  "stairs"
+                ],
+                "entities": [
+                  "light.master_bedroom_main_lights",
+                  "light.master_bedroom_accent_lights"
+                ]
+              },
+              "turn_on": {
+                "entities": [
+                  "light.master_bedroom_will_s_light",
+                  "light.master_bedroom_robin_s_light"
+                ]
+              },
+              "dim": {
+                "entities": {
+                  "light.hallway_lights": 7,
+                  "light.stairs_main_lights": 7
+                }
+              }
+            },
+            "colin_sleep": {
+              "turn_off": {
+                "areas": [
+                  "colin_s_room"
+                ]
+              }
+            },
+            "story_time": {
+              "turn_off": {
+                "entities": [
+                  "light.colin_s_room_accent_lights",
+                  "light.colin_s_room_main_lights"
+                ]
+              },
+              "dim": {
+                "entities": {
+                  "light.colin_s_room_sconces": 30
+                }
+              }
+            },
+            "sleep": {
+              "depends_turn_on": [
+                "bedtime"
+              ],
+              "turn_off": {
+                "areas": [
+                  "master_bedroom"
+                ]
+              }
+            },
+            "morning": {
+              "turn_on": {
+                "areas": null,
+                "entities": [
+                  "light.master_bedroom_will_s_light",
+                  "light.master_bedroom_robin_s_light"
+                ]
+              }
+            }
+          }
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "pyscript",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "e8d31c5c7095c6b4a5c40a81faa43a9c",
+        "version": 1,
+        "domain": "twinkly",
+        "title": "Twinkly_FBEC1D",
+        "data": {
+          "host": "10.0.0.185",
+          "id": "3AF143C2-F7FF-40E7-8905-C142C8A41F58",
+          "name": "Tree 1",
+          "model": "TWS400SPP"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "dhcp",
+        "unique_id": "3AF143C2-F7FF-40E7-8905-C142C8A41F58",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "823258694e7360a09a81d66fa72bd4ae",
+        "version": 1,
+        "domain": "twinkly",
+        "title": "Twinkly_FA2281",
+        "data": {
+          "host": "10.0.0.193",
+          "id": "6585E374-1372-4523-94A2-69DDBDEED5FC",
+          "name": "Tree 2",
+          "model": "TWS400SPP"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "dhcp",
+        "unique_id": "6585E374-1372-4523-94A2-69DDBDEED5FC",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "3ad6d81e567bda30cd74909cb072cec8",
+        "version": 1,
+        "domain": "twinkly",
+        "title": "Twinkly_7A9341",
+        "data": {
+          "host": "10.0.0.108",
+          "id": "0F75954B-F320-4C56-9B83-DC7554379A3A",
+          "name": "Porch 1",
+          "model": "TWI190SPP"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "dhcp",
+        "unique_id": "0F75954B-F320-4C56-9B83-DC7554379A3A",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "ecdb1322609d01ea39037f253c0f02f5",
+        "version": 1,
+        "domain": "dlna_dmr",
+        "title": "Bose",
+        "data": {
+          "url": "http://10.0.0.119:8091/be25a43f-54ca-6dee-0879-151fed7632e7.xml"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "uuid:be25a43f-54ca-6dee-0879-151fed7632e7",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "dd672c0e813fa4ce1a6dd118d941c6a0",
+        "version": 1,
+        "domain": "dlna_dms",
+        "title": "HDHomeRun DMS 1061AF90",
+        "data": {
+          "url": "http://10.0.0.81:80/dms/device.xml"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "uuid:5CC1AA73-AEEE-3802-A72A-1DC7141814CA::urn:schemas-upnp-org:device:MediaServer:1",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "3d39023ab36b3b8eccd5666f738c98af",
+        "version": 1,
+        "domain": "ui_lovelace_minimalist",
+        "title": "UI Lovelace Minimalist",
+        "data": {
+          "token": "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"
+        },
+        "options": {
+          "language": "English (GB)",
+          "sidepanel_enabled": true,
+          "sidepanel_title": "Marietta Desktop",
+          "sidepanel_icon": "mdi:flower",
+          "adaptive_ui_enabled": true,
+          "adaptive_ui_title": "Marietta Mobile",
+          "adaptive_ui_icon": "mdi:flower",
+          "theme": "minimalist-mobile",
+          "theme_path": "themes/",
+          "include_other_cards": true,
+          "community_cards_enabled": true,
+          "community_cards": [
+            "custom_card_irmajavi_weather",
+            "custom_card_imswel_person",
+            "custom_card_nik_door",
+            "custom_card_nik_clock",
+            "custom_card_person_info",
+            "custom_card_person_chip",
+            "custom_card_scenes",
+            "custom_card_schumijo_car",
+            "custom_card_esh_room",
+            "custom_card_camera",
+            "custom_card_device_tracker"
+          ]
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "1f0060521a842fce879f053a00f5f560",
+        "version": 2,
+        "domain": "browser_mod",
+        "title": "Browser Mod",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "7ffd53e8c2c83b2af1a0c1bce42ab91e",
+        "version": 1,
+        "domain": "homekit",
+        "title": "HomeKit",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "e9d31374e5ef80c482ab4c3e2ebe7954",
+        "version": 1,
+        "domain": "homekit_controller",
+        "title": "VELUX Gateway",
+        "data": {
+          "AccessoryPairingID": "AA:4A:8F:44:7C:D2",
+          "AccessoryLTPK": "4601f20320c4eef9ba44ed6914afb0fe60f1abe9f5dea2e7e4dc543216ac716c",
+          "iOSPairingId": "04eb42cd-bfaa-42e6-8a73-c2dbd10c1c7e",
+          "iOSDeviceLTSK": "597644b5c8122293e68a41f0ad0173ed05f4b9a7e117c781bf118881b31659d5",
+          "iOSDeviceLTPK": "fbd92b0b9412e795f2f2475f4506286c4e79e2a71d3ae774148d35e1b5a75611",
+          "AccessoryIP": "10.0.0.133",
+          "AccessoryPort": 5001,
+          "Connection": "IP"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "aa:4a:8f:44:7c:d2",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "1dae84dca4ec07f16b66c17af13568de",
+        "version": 1,
+        "domain": "twinkly",
+        "title": "Twinkly_AF4F71",
+        "data": {
+          "host": "10.0.0.139",
+          "id": "90370E8C-A161-4B55-A565-240A53DF1B12",
+          "name": "Porch 2",
+          "model": "TWI190SPP"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "dhcp",
+        "unique_id": "90370E8C-A161-4B55-A565-240A53DF1B12",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b35ed5e05868cfa63f140046a481ffab",
+        "version": 3,
+        "domain": "zha",
+        "title": "SONOFF Zigbee 3.0 USB Dongle Plus V2",
+        "data": {
+          "device": {
+            "path": "/dev/ttyACM0"
+          }
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "ignore",
+        "unique_id": "1A86:55D4_20220810155531_ITEAD_SONOFF Zigbee 3.0 USB Dongle Plus V2",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "d15d4649d9dfd544a36abe6a4df4c85c",
+        "version": 1,
+        "domain": "accuweather",
+        "title": "Home",
+        "data": {
+          "api_key": "meg2iQfoohm9x6AYNNtpysAVZIz9LlwA",
+          "latitude": 37.73827703469568,
+          "longitude": -122.4456310272217,
+          "name": "Home"
+        },
+        "options": {
+          "forecast": true
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": "2628230",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "495f0199266d622f97095bce0675b364",
+        "version": 1,
+        "domain": "waze_travel_time",
+        "title": "Will's ETA Home",
+        "data": {
+          "name": "Waze Travel Time",
+          "origin": "sensor.will_s_iphone_14_pro_geocoded_location",
+          "destination": "zone.home",
+          "region": "US"
+        },
+        "options": {
+          "realtime": true,
+          "vehicle_type": "car",
+          "avoid_toll_roads": false,
+          "avoid_subscription_roads": false,
+          "avoid_ferries": false,
+          "units": "metric"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "7f355fd3a96615a2b094741ce9334ac7",
+        "version": 1,
+        "domain": "waze_travel_time",
+        "title": "Robin's ETA Home",
+        "data": {
+          "name": "Robin's ETA Home",
+          "origin": "sensor.robin_s_iphone_geocoded_location",
+          "destination": "zone.home",
+          "region": "US"
+        },
+        "options": {
+          "realtime": true,
+          "vehicle_type": "car",
+          "avoid_toll_roads": false,
+          "avoid_subscription_roads": false,
+          "avoid_ferries": false,
+          "units": "metric"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "20b70a47a87cf1ae4f8fbc23f6ee0016",
+        "version": 1,
+        "domain": "group",
+        "title": "Living Room Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Living Room Lights",
+          "entities": [
+            "light.living_room_bar2",
+            "light.living_room_ceiling",
+            "light.living_room_ceiling_bar",
+            "light.living_room_table"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "99c49a5cc5ee9acee22c622142a5df91",
+        "version": 1,
+        "domain": "group",
+        "title": "Kitchen Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Kitchen Lights",
+          "entities": [
+            "light.kitchen_cabinets",
+            "light.kitchen_island_pendants",
+            "light.kitchen_main_lights"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "861c440a44a612af619a4e76fe5c479a",
+        "version": 1,
+        "domain": "group",
+        "title": "Common Area Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Common Area Lights",
+          "entities": [
+            "light.living_room_lights",
+            "light.kitchen_lights",
+            "light.hallway_lights"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "26936a77290fa5017e315b5776e553bf",
+        "version": 1,
+        "domain": "group",
+        "title": "Garage Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Garage Lights",
+          "entities": [
+            "light.garage_main_lights",
+            "light.garage_storage",
+            "light.garage_workbench_lights",
+            "light.will_desk_lamp"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "7e5e17e9d496ad139f9c1e226c6eea76",
+        "version": 1,
+        "domain": "group",
+        "title": "Bedroom Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Bedroom Lights",
+          "entities": [
+            "light.master_bedroom_accent_lights",
+            "light.master_bedroom_bathroom",
+            "light.master_bedroom_main_lights",
+            "light.master_bedroom_robin_s_light",
+            "light.master_bedroom_will_s_light"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "bb61e7274b8de20c5c548d49c1202f33",
+        "version": 1,
+        "domain": "group",
+        "title": "Office Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Office Lights",
+          "entities": [
+            "light.office_desk_lamp",
+            "light.mariana_s_room_main_lights",
+            "light.mariana_s_room_accent_lights"
+          ],
+          "hide_members": false,
+          "all": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "6632222c7b4186227f48d2973d331442",
+        "version": 1,
+        "domain": "group",
+        "title": "Outside Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Outside Lights",
+          "entities": [
+            "light.outside_backyard_lights",
+            "light.outside_downstairs_door",
+            "light.outside_upstairs_front_door"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "de6947cf424a12e240a7820e4777e372",
+        "version": 1,
+        "domain": "group",
+        "title": "Mariana's Room Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Mariana's Room Lights",
+          "entities": [
+            "light.marianas_room_accent_lights",
+            "light.marianas_room_main_lights",
+            "light.marianas_room_sconces"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "a6cd377926ae519d36640d3a98c55dcb",
+        "version": 1,
+        "domain": "group",
+        "title": "Colin's Room Lights",
+        "data": {},
+        "options": {
+          "group_type": "light",
+          "name": "Colin's Room Lights",
+          "entities": [
+            "light.colin_s_bedroom_accent_lights",
+            "light.colin_s_bedroom_main_lights",
+            "light.colin_s_bedroom_sconces"
+          ],
+          "hide_members": false
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "729297a4fd59e410c3959946a9b0a7f5",
+        "version": 1,
+        "domain": "switch_as_x",
+        "title": "Tradfri A",
+        "data": {},
+        "options": {
+          "entity_id": "switch.tradfri_a",
+          "target_domain": "light"
+        },
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "user",
+        "unique_id": null,
+        "disabled_by": null
+      }
+    ]
+  }
+}

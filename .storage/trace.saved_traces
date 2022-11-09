@@ -1,0 +1,3153 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "trace.saved_traces",
+  "data": {
+    "automation.1667715124794": [
+      {
+        "extended_dict": {
+          "last_step": "condition/0",
+          "run_id": "135abd7a39af03bf7be046e94723a732",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2022-11-06T20:40:56.336001+00:00",
+            "finish": "2022-11-06T20:40:56.336364+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1667715124794",
+          "trigger": "state of sensor.magic_cube_action",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2022-11-06T20:40:56.336104+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.magic_shake",
+                    "state": "on",
+                    "attributes": {
+                      "last_triggered": null,
+                      "mode": "single",
+                      "current": 0,
+                      "id": "1667715124794",
+                      "friendly_name": "Magic Shake"
+                    },
+                    "last_changed": "2022-11-06T06:14:34.940860+00:00",
+                    "last_updated": "2022-11-06T06:14:34.940860+00:00",
+                    "context": {
+                      "id": "01GH5S765WKFWHKGB9PZ3XCNTQ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.magic_cube_action",
+                    "from_state": {
+                      "entity_id": "sensor.magic_cube_action",
+                      "state": "unknown",
+                      "attributes": {
+                        "icon": "mdi:gesture-double-tap",
+                        "friendly_name": "Magic Cube action"
+                      },
+                      "last_changed": "2022-11-06T20:40:56.031903+00:00",
+                      "last_updated": "2022-11-06T20:40:56.031903+00:00",
+                      "context": {
+                        "id": "01GH7ASGYZH5D5X6A9JWJH0GTS",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.magic_cube_action",
+                      "state": "None",
+                      "attributes": {
+                        "icon": "mdi:gesture-double-tap",
+                        "friendly_name": "Magic Cube action"
+                      },
+                      "last_changed": "2022-11-06T20:40:56.330256+00:00",
+                      "last_updated": "2022-11-06T20:40:56.330256+00:00",
+                      "context": {
+                        "id": "01GH7ASH8AJCX6QZK30B7X7VQN",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.magic_cube_action"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2022-11-06T20:40:56.336155+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "mode": "single",
+            "max_exceeded": "silent",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": "sensor.magic_cube_action"
+              }
+            ],
+            "condition": {
+              "condition": "template",
+              "value_template": "{{ trigger.to_state.attributes.action in ('rotate_right', 'rotate_left', 'flip90', 'flip180', 'slide', 'tap', 'shake', 'fall') }}"
+            },
+            "action": [
+              {
+                "variables": {
+                  "action": "{{ trigger.to_state.attributes.action }}",
+                  "side": "{{ trigger.to_state.attributes.side }}",
+                  "last_side": "{{ trigger.from_state.attributes.side }}",
+                  "entity_id": "sensor.magic_cube_action",
+                  "friendly_name": "{{ trigger.to_state.attributes.friendly_name }}"
+                }
+              },
+              {
+                "alias": "Fire Last Action event",
+                "event": "cube_last_action",
+                "event_data": {
+                  "action": "{{ action }}",
+                  "side": "{{ side }}",
+                  "last_side": "{{ last_side }}",
+                  "entity_id": "{{ entity_id }}",
+                  "friendly_name": "{{ friendly_name }}"
+                }
+              },
+              {
+                "alias": "Group 2 \ud83c\udf4a and No Group \ud83c\udf69 These are action events for ANY Side",
+                "choose": [
+                  {
+                    "conditions": "{{ action == \"slide\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"tap\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"flip90\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"flip180\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_right\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_left\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"shake\" }}",
+                    "sequence": [
+                      {
+                        "service": "notify.mobile_app_will_s_iphone_14_pro",
+                        "data": {
+                          "message": "Shake it!!"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"fall\" }}",
+                    "sequence": []
+                  }
+                ]
+              },
+              {
+                "alias": "Group 1 \ud83c\udf4e These are action events based on the action broken down by side",
+                "choose": [
+                  {
+                    "conditions": "{{ action == \"slide\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are slide events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": [
+                              {
+                                "service": "notify.mobile_app_will_s_iphone_14_pro",
+                                "data": {
+                                  "message": "Slide",
+                                  "title": "Sliiiide"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"tap\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are doubletap events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"flip90\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are flipped90 events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"flip180\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are flipped180 events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_right\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are rotate CW events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_left\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are rotate CCW events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "alias": "Group 3 \ud83c\udf50 Side to side jump events",
+                "choose": [
+                  {
+                    "conditions": "{{ side == 0 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 0 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 1 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 1 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 2 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 2 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 3 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 3 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 4 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 4 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 5 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 5 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "alias": "Delay \u23f1 for debounce so toggle functions work. Also blueprint is in single mode.",
+                "delay": "00:00:01"
+              }
+            ],
+            "id": "1667715124794",
+            "alias": "Magic Shake",
+            "description": ""
+          },
+          "blueprint_inputs": {
+            "id": "1667715124794",
+            "alias": "Magic Shake",
+            "description": "",
+            "use_blueprint": {
+              "path": "SirGoodenough/Zigbee2MQTT - Xiaomi Cube Controller.yaml",
+              "input": {
+                "remote": "sensor.magic_cube_action",
+                "shake": [
+                  {
+                    "service": "notify.mobile_app_will_s_iphone_14_pro",
+                    "data": {
+                      "message": "Shake it!!"
+                    }
+                  }
+                ],
+                "slide_face_0": [
+                  {
+                    "service": "notify.mobile_app_will_s_iphone_14_pro",
+                    "data": {
+                      "message": "Slide",
+                      "title": "Sliiiide"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "context": {
+            "id": "01GH7ASH8FH379JT0FDNQZKKYS",
+            "parent_id": "01GH7ASH8AJCX6QZK30B7X7VQN",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0",
+          "run_id": "135abd7a39af03bf7be046e94723a732",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2022-11-06T20:40:56.336001+00:00",
+            "finish": "2022-11-06T20:40:56.336364+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1667715124794",
+          "trigger": "state of sensor.magic_cube_action"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0",
+          "run_id": "b51f56ae74e610013262c696bf987aec",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2022-11-06T20:59:27.258158+00:00",
+            "finish": "2022-11-06T20:59:27.258641+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1667715124794",
+          "trigger": "state of sensor.magic_cube_action",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2022-11-06T20:59:27.258261+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.magic_shake",
+                    "state": "on",
+                    "attributes": {
+                      "last_triggered": null,
+                      "mode": "single",
+                      "current": 0,
+                      "id": "1667715124794",
+                      "friendly_name": "Magic Shake"
+                    },
+                    "last_changed": "2022-11-06T06:14:34.940860+00:00",
+                    "last_updated": "2022-11-06T06:14:34.940860+00:00",
+                    "context": {
+                      "id": "01GH5S765WKFWHKGB9PZ3XCNTQ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.magic_cube_action",
+                    "from_state": {
+                      "entity_id": "sensor.magic_cube_action",
+                      "state": "None",
+                      "attributes": {
+                        "icon": "mdi:gesture-double-tap",
+                        "friendly_name": "Magic Cube action"
+                      },
+                      "last_changed": "2022-11-06T20:40:56.330256+00:00",
+                      "last_updated": "2022-11-06T20:40:56.330256+00:00",
+                      "context": {
+                        "id": "01GH7ASH8AJCX6QZK30B7X7VQN",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.magic_cube_action",
+                      "state": "unavailable",
+                      "attributes": {
+                        "restored": true,
+                        "icon": "mdi:gesture-double-tap",
+                        "friendly_name": "Magic Cube action",
+                        "supported_features": 0
+                      },
+                      "last_changed": "2022-11-06T20:59:27.229228+00:00",
+                      "last_updated": "2022-11-06T20:59:27.229228+00:00",
+                      "context": {
+                        "id": "01GH7BVE3XA1EH0PQ62VAG22SE",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.magic_cube_action"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2022-11-06T20:59:27.258328+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "mode": "single",
+            "max_exceeded": "silent",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": "sensor.magic_cube_action"
+              }
+            ],
+            "condition": {
+              "condition": "template",
+              "value_template": "{{ trigger.to_state.attributes.action in ('rotate_right', 'rotate_left', 'flip90', 'flip180', 'slide', 'tap', 'shake', 'fall') }}"
+            },
+            "action": [
+              {
+                "variables": {
+                  "action": "{{ trigger.to_state.attributes.action }}",
+                  "side": "{{ trigger.to_state.attributes.side }}",
+                  "last_side": "{{ trigger.from_state.attributes.side }}",
+                  "entity_id": "sensor.magic_cube_action",
+                  "friendly_name": "{{ trigger.to_state.attributes.friendly_name }}"
+                }
+              },
+              {
+                "alias": "Fire Last Action event",
+                "event": "cube_last_action",
+                "event_data": {
+                  "action": "{{ action }}",
+                  "side": "{{ side }}",
+                  "last_side": "{{ last_side }}",
+                  "entity_id": "{{ entity_id }}",
+                  "friendly_name": "{{ friendly_name }}"
+                }
+              },
+              {
+                "alias": "Group 2 \ud83c\udf4a and No Group \ud83c\udf69 These are action events for ANY Side",
+                "choose": [
+                  {
+                    "conditions": "{{ action == \"slide\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"tap\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"flip90\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"flip180\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_right\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_left\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"shake\" }}",
+                    "sequence": [
+                      {
+                        "service": "notify.mobile_app_will_s_iphone_14_pro",
+                        "data": {
+                          "message": "Shake it!!"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"fall\" }}",
+                    "sequence": []
+                  }
+                ]
+              },
+              {
+                "alias": "Group 1 \ud83c\udf4e These are action events based on the action broken down by side",
+                "choose": [
+                  {
+                    "conditions": "{{ action == \"slide\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are slide events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": [
+                              {
+                                "service": "notify.mobile_app_will_s_iphone_14_pro",
+                                "data": {
+                                  "message": "Slide",
+                                  "title": "Sliiiide"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"tap\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are doubletap events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"flip90\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are flipped90 events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"flip180\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are flipped180 events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_right\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are rotate CW events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_left\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are rotate CCW events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "alias": "Group 3 \ud83c\udf50 Side to side jump events",
+                "choose": [
+                  {
+                    "conditions": "{{ side == 0 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 0 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 1 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 1 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 2 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 2 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 3 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 3 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 4 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 4 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 5 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 5 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "alias": "Delay \u23f1 for debounce so toggle functions work. Also blueprint is in single mode.",
+                "delay": "00:00:01"
+              }
+            ],
+            "id": "1667715124794",
+            "alias": "Magic Shake",
+            "description": ""
+          },
+          "blueprint_inputs": {
+            "id": "1667715124794",
+            "alias": "Magic Shake",
+            "description": "",
+            "use_blueprint": {
+              "path": "SirGoodenough/Zigbee2MQTT - Xiaomi Cube Controller.yaml",
+              "input": {
+                "remote": "sensor.magic_cube_action",
+                "shake": [
+                  {
+                    "service": "notify.mobile_app_will_s_iphone_14_pro",
+                    "data": {
+                      "message": "Shake it!!"
+                    }
+                  }
+                ],
+                "slide_face_0": [
+                  {
+                    "service": "notify.mobile_app_will_s_iphone_14_pro",
+                    "data": {
+                      "message": "Slide",
+                      "title": "Sliiiide"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "context": {
+            "id": "01GH7BVE4TJ0VDG3QJGBWAW8BH",
+            "parent_id": "01GH7BVE3XA1EH0PQ62VAG22SE",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0",
+          "run_id": "b51f56ae74e610013262c696bf987aec",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2022-11-06T20:59:27.258158+00:00",
+            "finish": "2022-11-06T20:59:27.258641+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1667715124794",
+          "trigger": "state of sensor.magic_cube_action"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0",
+          "run_id": "d8bf37ce7278344c41f72ff2ea75a7c2",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2022-11-06T20:59:28.259000+00:00",
+            "finish": "2022-11-06T20:59:28.259370+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1667715124794",
+          "trigger": "state of sensor.magic_cube_action",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2022-11-06T20:59:28.259089+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.magic_shake",
+                    "state": "on",
+                    "attributes": {
+                      "last_triggered": null,
+                      "mode": "single",
+                      "current": 0,
+                      "id": "1667715124794",
+                      "friendly_name": "Magic Shake"
+                    },
+                    "last_changed": "2022-11-06T06:14:34.940860+00:00",
+                    "last_updated": "2022-11-06T06:14:34.940860+00:00",
+                    "context": {
+                      "id": "01GH5S765WKFWHKGB9PZ3XCNTQ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.magic_cube_action",
+                    "from_state": {
+                      "entity_id": "sensor.magic_cube_action",
+                      "state": "unavailable",
+                      "attributes": {
+                        "restored": true,
+                        "icon": "mdi:gesture-double-tap",
+                        "friendly_name": "Magic Cube action",
+                        "supported_features": 0
+                      },
+                      "last_changed": "2022-11-06T20:59:27.229228+00:00",
+                      "last_updated": "2022-11-06T20:59:27.229228+00:00",
+                      "context": {
+                        "id": "01GH7BVE3XA1EH0PQ62VAG22SE",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.magic_cube_action",
+                      "state": "unknown",
+                      "attributes": {
+                        "icon": "mdi:gesture-double-tap",
+                        "friendly_name": "Magic Cube action"
+                      },
+                      "last_changed": "2022-11-06T20:59:28.250196+00:00",
+                      "last_updated": "2022-11-06T20:59:28.250196+00:00",
+                      "context": {
+                        "id": "01GH7BVF3TDW1J8JX84KM3H4NM",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.magic_cube_action"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2022-11-06T20:59:28.259141+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "mode": "single",
+            "max_exceeded": "silent",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": "sensor.magic_cube_action"
+              }
+            ],
+            "condition": {
+              "condition": "template",
+              "value_template": "{{ trigger.to_state.attributes.action in ('rotate_right', 'rotate_left', 'flip90', 'flip180', 'slide', 'tap', 'shake', 'fall') }}"
+            },
+            "action": [
+              {
+                "variables": {
+                  "action": "{{ trigger.to_state.attributes.action }}",
+                  "side": "{{ trigger.to_state.attributes.side }}",
+                  "last_side": "{{ trigger.from_state.attributes.side }}",
+                  "entity_id": "sensor.magic_cube_action",
+                  "friendly_name": "{{ trigger.to_state.attributes.friendly_name }}"
+                }
+              },
+              {
+                "alias": "Fire Last Action event",
+                "event": "cube_last_action",
+                "event_data": {
+                  "action": "{{ action }}",
+                  "side": "{{ side }}",
+                  "last_side": "{{ last_side }}",
+                  "entity_id": "{{ entity_id }}",
+                  "friendly_name": "{{ friendly_name }}"
+                }
+              },
+              {
+                "alias": "Group 2 \ud83c\udf4a and No Group \ud83c\udf69 These are action events for ANY Side",
+                "choose": [
+                  {
+                    "conditions": "{{ action == \"slide\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"tap\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"flip90\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"flip180\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_right\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_left\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"shake\" }}",
+                    "sequence": [
+                      {
+                        "service": "notify.mobile_app_will_s_iphone_14_pro",
+                        "data": {
+                          "message": "Shake it!!"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"fall\" }}",
+                    "sequence": []
+                  }
+                ]
+              },
+              {
+                "alias": "Group 1 \ud83c\udf4e These are action events based on the action broken down by side",
+                "choose": [
+                  {
+                    "conditions": "{{ action == \"slide\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are slide events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": [
+                              {
+                                "service": "notify.mobile_app_will_s_iphone_14_pro",
+                                "data": {
+                                  "message": "Slide",
+                                  "title": "Sliiiide"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"tap\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are doubletap events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"flip90\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are flipped90 events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"flip180\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are flipped180 events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_right\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are rotate CW events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_left\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are rotate CCW events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "alias": "Group 3 \ud83c\udf50 Side to side jump events",
+                "choose": [
+                  {
+                    "conditions": "{{ side == 0 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 0 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 1 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 1 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 2 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 2 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 3 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 3 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 4 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 4 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 5 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 5 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "alias": "Delay \u23f1 for debounce so toggle functions work. Also blueprint is in single mode.",
+                "delay": "00:00:01"
+              }
+            ],
+            "id": "1667715124794",
+            "alias": "Magic Shake",
+            "description": ""
+          },
+          "blueprint_inputs": {
+            "id": "1667715124794",
+            "alias": "Magic Shake",
+            "description": "",
+            "use_blueprint": {
+              "path": "SirGoodenough/Zigbee2MQTT - Xiaomi Cube Controller.yaml",
+              "input": {
+                "remote": "sensor.magic_cube_action",
+                "shake": [
+                  {
+                    "service": "notify.mobile_app_will_s_iphone_14_pro",
+                    "data": {
+                      "message": "Shake it!!"
+                    }
+                  }
+                ],
+                "slide_face_0": [
+                  {
+                    "service": "notify.mobile_app_will_s_iphone_14_pro",
+                    "data": {
+                      "message": "Slide",
+                      "title": "Sliiiide"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "context": {
+            "id": "01GH7BVF42RKR3HEDYPMPSPXCZ",
+            "parent_id": "01GH7BVF3TDW1J8JX84KM3H4NM",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0",
+          "run_id": "d8bf37ce7278344c41f72ff2ea75a7c2",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2022-11-06T20:59:28.259000+00:00",
+            "finish": "2022-11-06T20:59:28.259370+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1667715124794",
+          "trigger": "state of sensor.magic_cube_action"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0",
+          "run_id": "870963475b92364580ff5c3225917e51",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2022-11-06T21:00:00.639681+00:00",
+            "finish": "2022-11-06T21:00:00.640517+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1667715124794",
+          "trigger": "state of sensor.magic_cube_action",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2022-11-06T21:00:00.639936+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.magic_shake",
+                    "state": "on",
+                    "attributes": {
+                      "last_triggered": null,
+                      "mode": "single",
+                      "current": 0,
+                      "id": "1667715124794",
+                      "friendly_name": "Magic Shake"
+                    },
+                    "last_changed": "2022-11-06T06:14:34.940860+00:00",
+                    "last_updated": "2022-11-06T06:14:34.940860+00:00",
+                    "context": {
+                      "id": "01GH5S765WKFWHKGB9PZ3XCNTQ",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.magic_cube_action",
+                    "from_state": {
+                      "entity_id": "sensor.magic_cube_action",
+                      "state": "unknown",
+                      "attributes": {
+                        "icon": "mdi:gesture-double-tap",
+                        "friendly_name": "Magic Cube action"
+                      },
+                      "last_changed": "2022-11-06T20:59:28.250196+00:00",
+                      "last_updated": "2022-11-06T20:59:28.250196+00:00",
+                      "context": {
+                        "id": "01GH7BVF3TDW1J8JX84KM3H4NM",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.magic_cube_action",
+                      "state": "None",
+                      "attributes": {
+                        "icon": "mdi:gesture-double-tap",
+                        "friendly_name": "Magic Cube action"
+                      },
+                      "last_changed": "2022-11-06T21:00:00.632943+00:00",
+                      "last_updated": "2022-11-06T21:00:00.632943+00:00",
+                      "context": {
+                        "id": "01GH7BWEQRJNHRFFX17DW9FXWN",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.magic_cube_action"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2022-11-06T21:00:00.640091+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "mode": "single",
+            "max_exceeded": "silent",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": "sensor.magic_cube_action"
+              }
+            ],
+            "condition": {
+              "condition": "template",
+              "value_template": "{{ trigger.to_state.attributes.action in ('rotate_right', 'rotate_left', 'flip90', 'flip180', 'slide', 'tap', 'shake', 'fall') }}"
+            },
+            "action": [
+              {
+                "variables": {
+                  "action": "{{ trigger.to_state.attributes.action }}",
+                  "side": "{{ trigger.to_state.attributes.side }}",
+                  "last_side": "{{ trigger.from_state.attributes.side }}",
+                  "entity_id": "sensor.magic_cube_action",
+                  "friendly_name": "{{ trigger.to_state.attributes.friendly_name }}"
+                }
+              },
+              {
+                "alias": "Fire Last Action event",
+                "event": "cube_last_action",
+                "event_data": {
+                  "action": "{{ action }}",
+                  "side": "{{ side }}",
+                  "last_side": "{{ last_side }}",
+                  "entity_id": "{{ entity_id }}",
+                  "friendly_name": "{{ friendly_name }}"
+                }
+              },
+              {
+                "alias": "Group 2 \ud83c\udf4a and No Group \ud83c\udf69 These are action events for ANY Side",
+                "choose": [
+                  {
+                    "conditions": "{{ action == \"slide\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"tap\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"flip90\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"flip180\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_right\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_left\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"shake\" }}",
+                    "sequence": [
+                      {
+                        "service": "notify.mobile_app_will_s_iphone_14_pro",
+                        "data": {
+                          "message": "Shake it!!"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"fall\" }}",
+                    "sequence": []
+                  }
+                ]
+              },
+              {
+                "alias": "Group 1 \ud83c\udf4e These are action events based on the action broken down by side",
+                "choose": [
+                  {
+                    "conditions": "{{ action == \"slide\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are slide events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": [
+                              {
+                                "service": "notify.mobile_app_will_s_iphone_14_pro",
+                                "data": {
+                                  "message": "Slide",
+                                  "title": "Sliiiide"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"tap\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are doubletap events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"flip90\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are flipped90 events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"flip180\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are flipped180 events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_right\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are rotate CW events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_left\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are rotate CCW events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "alias": "Group 3 \ud83c\udf50 Side to side jump events",
+                "choose": [
+                  {
+                    "conditions": "{{ side == 0 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 0 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 1 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 1 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 2 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 2 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 3 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 3 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 4 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 4 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 5 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 5 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "alias": "Delay \u23f1 for debounce so toggle functions work. Also blueprint is in single mode.",
+                "delay": "00:00:01"
+              }
+            ],
+            "id": "1667715124794",
+            "alias": "Magic Shake",
+            "description": ""
+          },
+          "blueprint_inputs": {
+            "id": "1667715124794",
+            "alias": "Magic Shake",
+            "description": "",
+            "use_blueprint": {
+              "path": "SirGoodenough/Zigbee2MQTT - Xiaomi Cube Controller.yaml",
+              "input": {
+                "remote": "sensor.magic_cube_action",
+                "shake": [
+                  {
+                    "service": "notify.mobile_app_will_s_iphone_14_pro",
+                    "data": {
+                      "message": "Shake it!!"
+                    }
+                  }
+                ],
+                "slide_face_0": [
+                  {
+                    "service": "notify.mobile_app_will_s_iphone_14_pro",
+                    "data": {
+                      "message": "Slide",
+                      "title": "Sliiiide"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "context": {
+            "id": "01GH7BWEQZDRQR0BS2ZTR6381A",
+            "parent_id": "01GH7BWEQRJNHRFFX17DW9FXWN",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0",
+          "run_id": "870963475b92364580ff5c3225917e51",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2022-11-06T21:00:00.639681+00:00",
+            "finish": "2022-11-06T21:00:00.640517+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1667715124794",
+          "trigger": "state of sensor.magic_cube_action"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0",
+          "run_id": "f457ea9b427a181ba4e49e78ec3c61b0",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2022-11-08T17:22:54.520271+00:00",
+            "finish": "2022-11-08T17:22:55.010962+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1667715124794",
+          "trigger": "state of sensor.magic_cube_action",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2022-11-08T17:22:54.520430+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.magic_shake",
+                    "state": "on",
+                    "attributes": {
+                      "last_triggered": null,
+                      "mode": "single",
+                      "current": 0,
+                      "id": "1667715124794",
+                      "friendly_name": "Magic Shake"
+                    },
+                    "last_changed": "2022-11-08T17:21:24.629783+00:00",
+                    "last_updated": "2022-11-08T17:21:24.629783+00:00",
+                    "context": {
+                      "id": "01GHC45M4NQXGB50MSQW9PEHK4",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.magic_cube_action",
+                    "from_state": {
+                      "entity_id": "sensor.magic_cube_action",
+                      "state": "unknown",
+                      "attributes": {
+                        "icon": "mdi:gesture-double-tap",
+                        "friendly_name": "Magic Cube action"
+                      },
+                      "last_changed": "2022-11-08T17:21:23.822309+00:00",
+                      "last_updated": "2022-11-08T17:21:23.822309+00:00",
+                      "context": {
+                        "id": "01GHC45KBEWMVXAM9H6B29FGCY",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.magic_cube_action",
+                      "state": "None",
+                      "attributes": {
+                        "icon": "mdi:gesture-double-tap",
+                        "friendly_name": "Magic Cube action"
+                      },
+                      "last_changed": "2022-11-08T17:22:54.507107+00:00",
+                      "last_updated": "2022-11-08T17:22:54.507107+00:00",
+                      "context": {
+                        "id": "01GHC48BXBHBP9AK5CV0VBE81T",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.magic_cube_action"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2022-11-08T17:22:54.520513+00:00",
+                "result": {
+                  "result": false,
+                  "entities": []
+                }
+              }
+            ]
+          },
+          "config": {
+            "mode": "single",
+            "max_exceeded": "silent",
+            "trigger": [
+              {
+                "platform": "state",
+                "entity_id": "sensor.magic_cube_action"
+              }
+            ],
+            "condition": {
+              "condition": "template",
+              "value_template": "{{ trigger.to_state.attributes.action in ('rotate_right', 'rotate_left', 'flip90', 'flip180', 'slide', 'tap', 'shake', 'fall') }}"
+            },
+            "action": [
+              {
+                "variables": {
+                  "action": "{{ trigger.to_state.attributes.action }}",
+                  "side": "{{ trigger.to_state.attributes.side }}",
+                  "last_side": "{{ trigger.from_state.attributes.side }}",
+                  "entity_id": "sensor.magic_cube_action",
+                  "friendly_name": "{{ trigger.to_state.attributes.friendly_name }}"
+                }
+              },
+              {
+                "alias": "Fire Last Action event",
+                "event": "cube_last_action",
+                "event_data": {
+                  "action": "{{ action }}",
+                  "side": "{{ side }}",
+                  "last_side": "{{ last_side }}",
+                  "entity_id": "{{ entity_id }}",
+                  "friendly_name": "{{ friendly_name }}"
+                }
+              },
+              {
+                "alias": "Group 2 \ud83c\udf4a and No Group \ud83c\udf69 These are action events for ANY Side",
+                "choose": [
+                  {
+                    "conditions": "{{ action == \"slide\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"tap\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"flip90\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"flip180\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_right\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_left\" }}",
+                    "sequence": []
+                  },
+                  {
+                    "conditions": "{{ action == \"shake\" }}",
+                    "sequence": [
+                      {
+                        "service": "notify.mobile_app_will_s_iphone_14_pro",
+                        "data": {
+                          "message": "Shake it!!"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"fall\" }}",
+                    "sequence": []
+                  }
+                ]
+              },
+              {
+                "alias": "Group 1 \ud83c\udf4e These are action events based on the action broken down by side",
+                "choose": [
+                  {
+                    "conditions": "{{ action == \"slide\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are slide events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": [
+                              {
+                                "service": "notify.mobile_app_will_s_iphone_14_pro",
+                                "data": {
+                                  "message": "Slide",
+                                  "title": "Sliiiide"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"tap\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are doubletap events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"flip90\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are flipped90 events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"flip180\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are flipped180 events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_right\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are rotate CW events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ action == \"rotate_left\" }}",
+                    "sequence": [
+                      {
+                        "alias": "These are rotate CCW events",
+                        "choose": [
+                          {
+                            "conditions": "{{ side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "alias": "Group 3 \ud83c\udf50 Side to side jump events",
+                "choose": [
+                  {
+                    "conditions": "{{ side == 0 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 0 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 1 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 1 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 2 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 2 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 3 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 3 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 4 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 4 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 5 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "conditions": "{{ side == 5 }}",
+                    "sequence": [
+                      {
+                        "alias": "To side 5 from any events",
+                        "choose": [
+                          {
+                            "conditions": "{{ last_side == 0 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 1 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 2 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 3 }}",
+                            "sequence": []
+                          },
+                          {
+                            "conditions": "{{ last_side == 4 }}",
+                            "sequence": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "alias": "Delay \u23f1 for debounce so toggle functions work. Also blueprint is in single mode.",
+                "delay": "00:00:01"
+              }
+            ],
+            "id": "1667715124794",
+            "alias": "Magic Shake",
+            "description": ""
+          },
+          "blueprint_inputs": {
+            "id": "1667715124794",
+            "alias": "Magic Shake",
+            "description": "",
+            "use_blueprint": {
+              "path": "SirGoodenough/Zigbee2MQTT - Xiaomi Cube Controller.yaml",
+              "input": {
+                "remote": "sensor.magic_cube_action",
+                "shake": [
+                  {
+                    "service": "notify.mobile_app_will_s_iphone_14_pro",
+                    "data": {
+                      "message": "Shake it!!"
+                    }
+                  }
+                ],
+                "slide_face_0": [
+                  {
+                    "service": "notify.mobile_app_will_s_iphone_14_pro",
+                    "data": {
+                      "message": "Slide",
+                      "title": "Sliiiide"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "context": {
+            "id": "01GHC48BXRJGE22P1W8DE6R49F",
+            "parent_id": "01GHC48BXBHBP9AK5CV0VBE81T",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0",
+          "run_id": "f457ea9b427a181ba4e49e78ec3c61b0",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2022-11-08T17:22:54.520271+00:00",
+            "finish": "2022-11-08T17:22:55.010962+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1667715124794",
+          "trigger": "state of sensor.magic_cube_action"
+        }
+      }
+    ]
+  }
+}
