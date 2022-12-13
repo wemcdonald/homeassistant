@@ -4,9 +4,14 @@
 *.db
 *.db-wal
 *.db-shm
-nest/event_media/
 # Ignore folders.
-#.storage
+frontend
+nest/event_media/
+custom_components/
+blueprints/
+www/community
+image/
+.storage
 .cloud
 .google.token
 

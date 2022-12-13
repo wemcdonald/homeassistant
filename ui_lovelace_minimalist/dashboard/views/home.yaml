@@ -8,9 +8,9 @@ cards:
       ulm_card_esh_welcome_collapse: input_boolean.minimalist_welcome_toggle
       ulm_weather: "weather.home"
       entity_1:
-        nav: "house"
+        nav: "home"
         icon: "mdi:home"
-        name: "House"
+        name: "Home"
         color: "blue"
       entity_2:
         nav: "lights"
@@ -22,16 +22,6 @@ cards:
         icon: "mdi:shield"
         name: Secure
         color: "green"
-      entity_4:
-        nav: "network"
-        icon: "mdi:nas"
-        name: Lab
-        color: "purple"
-      entity_5:
-        nav: "network"
-        icon: "mdi:flask"
-        name: Lab
-        color: "red"
 
   - type: horizontal-stack
     cards:
@@ -41,9 +31,9 @@ cards:
         variables:
           ulm_card_person_entity: person.robin_shostack
           ulm_card_person_use_entity_picture: true
-          ulm_card_person_icon: mdi:face-man
-          ulm_card_person_eta: sensor.robin_s_eta_home
-          ulm_address: sensor.robin_s_iphone_geocoded_location
+          ulm_card_person_icon: mdi:face-woman
+          # ulm_card_person_eta: sensor.robin_s_eta_home
+          # ulm_address: sensor.robin_s_iphone_geocoded_location
       - type: 'custom:button-card'
         template: card_person
         entity: person.will_mcdonald
@@ -51,8 +41,8 @@ cards:
           ulm_card_person_entity: person.will_mcdonald
           ulm_card_person_use_entity_picture: true
           ulm_card_person_icon: mdi:face-man
-          ulm_card_person_eta: sensor.will_s_eta_home
-          ulm_address: sensor.will_s_iphone_14_pro_geocoded_location
+          # ulm_card_person_eta: sensor.will_s_eta_home
+          # ulm_address: sensor.will_s_iphone_14_pro_geocoded_location
       - type: 'custom:button-card'
         template: card_person
         entity: person.mariana
@@ -60,34 +50,51 @@ cards:
           ulm_card_person_entity: person.mariana
           ulm_card_person_use_entity_picture: true
           ulm_card_person_icon: mdi:face-woman
+  
+  
+  
+  
+  # - type: "custom:button-card"
+  #   template: "card_scenes_welcome"
+  #   variables:
+  #     entity_1:
+  #       entity_id: scene.stories
+  #       icon: "mdi:book-open-variant" #OPTIONAL
+  #       name: "Storytime" #OPTIONAL
+  #       color: green
+  #     entity_2:
+  #       entity_id: scene.colin_sleep
+  #       icon: "mdi:bed-clock" #OPTIONAL
+  #       name: "Colin Sleep" #OPTIONAL
+  #       color: yellow
+  #     entity_3:
+  #       entity_id: scene.nightstand
+  #       icon: "mdi:lamp" #OPTIONAL
+  #       name: "Nightstand" #OPTIONAL
+  #       color: pink
+  #     entity_4:
+  #       entity_id: scene.bedtime
+  #       icon: "mdi:power-sleep" #OPTIONAL
+  #       name: "Bedtime" #OPTIONAL
+  #       color: purple
+  #     entity_5:
+  #       entity_id: scene.sleep
+  #       icon: "mdi:sleep" #OPTIONAL
+  #       name: "Sleep" #OPTIONA
+  #       color: blue
+
+
   - type: "custom:button-card"
-    template: "card_scenes_welcome"
-    variables:
-      entity_1:
-        entity_id: scene.stories
-        icon: "mdi:book-open-variant" #OPTIONAL
-        name: "Storytime" #OPTIONAL
-        color: green
-      entity_2:
-        entity_id: scene.colin_sleep
-        icon: "mdi:bed-clock" #OPTIONAL
-        name: "Colin Sleep" #OPTIONAL
-        color: yellow
-      entity_3:
-        entity_id: scene.nightstand
-        icon: "mdi:lamp" #OPTIONAL
-        name: "Nightstand" #OPTIONAL
-        color: pink
-      entity_4:
-        entity_id: scene.bedtime
-        icon: "mdi:power-sleep" #OPTIONAL
-        name: "Bedtime" #OPTIONAL
-        color: purple
-      entity_5:
-        entity_id: scene.sleep
-        icon: "mdi:sleep" #OPTIONAL
-        name: "Sleep" #OPTIONA
-        color: blue
+    name: Sprinklers
+    show_label: true
+    entity: switch.lawn_sprinkler_state
+    icon: mdi:sprinkler
+    show_state: true
+    triggers_update:
+      - switch.lawn_sprinkler_state
+      - sensor.lawn_moisture_sensor_humidity
+    label: >
+      [[[ return states["sensor.lawn_moisture_sensor_humidity"].state + "% Wet" ]]]
 
   - type: 'custom:button-card'
     template: card_title
@@ -95,6 +102,7 @@ cards:
 
   - type: horizontal-stack
     cards:
+      # Living Room
       - type: "custom:button-card"
         template:
           - card_esh_room
@@ -110,6 +118,7 @@ cards:
           ulm_card_dynamic_color: true
         label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
 
+      # Kitchen
       - type: "custom:button-card"
         template:
           - card_esh_room

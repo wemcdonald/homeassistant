@@ -1,1 +1,119 @@
-[]
+- id: '1667715124794'
+  alias: Magic Shake
+  description: ''
+  use_blueprint:
+    path: SirGoodenough/Zigbee2MQTT - Xiaomi Cube Controller MQTT Triggered.yaml
+    input:
+      topic: zigbee2mqtt/Magic Cube
+      shake:
+      - service: notify.mobile_app_iphone
+        data:
+          message: Shake
+      doubletap_any:
+      - service: notify.mobile_app_iphone
+        data:
+          message: Tap tap
+      rotate_cw_any:
+      - service: notify.mobile_app_iphone
+        data:
+          message: Up
+      rotate_ccw_any:
+      - type: turn_off
+        device_id: 75517f7cf37e15af48c36f181e11010c
+        entity_id: light.master_bedroom_will_s_light
+        domain: light
+      rotate_cw_face_0:
+      - service: scene.turn_on
+        target:
+          entity_id: scene.bedtime
+        metadata: {}
+- id: '1668042018917'
+  alias: Reading Time
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.reading_time
+  condition: []
+  action:
+  - device_id: f71be86cb9438b1649050125e29324e8
+    domain: cover
+    entity_id: cover.bedroom_blinds
+    type: set_position
+    position: 0
+  - type: turn_on
+    device_id: 6e37183a2a72e3873b9337c3f5471c79
+    entity_id: light.master_bedroom_robin_s_light
+    domain: light
+  - type: turn_on
+    device_id: 75517f7cf37e15af48c36f181e11010c
+    entity_id: light.master_bedroom_will_s_light
+    domain: light
+  - type: turn_off
+    device_id: 0720bbb5d574796f99a2420dd4bf0c3b
+    entity_id: light.master_bedroom_main_lights
+    domain: light
+  - type: turn_off
+    device_id: e936ceef27619946ea8d4a4501fc1415
+    entity_id: light.master_bedroom_accent_lights
+    domain: light
+  mode: single
+- id: '1668042095474'
+  alias: Workday
+  description: ''
+  trigger:
+  - platform: time
+    at: input_datetime.workday
+  condition: []
+  action:
+  - device_id: f71be86cb9438b1649050125e29324e8
+    domain: cover
+    entity_id: cover.bedroom_blinds
+    type: set_position
+    position: 76
+  mode: single
+- id: '1668137236410'
+  alias: Blinds remote control
+  description: ''
+  use_blueprint:
+    path: EPMatt/ikea_e1766.yaml
+    input:
+      integration: Zigbee2MQTT
+      controller_entity: sensor.bedroom_blinds_switch_action
+      helper_last_controller_event: input_text.blinds_helper_last_controller_event
+      action_button_up_short:
+      - device_id: f71be86cb9438b1649050125e29324e8
+        domain: cover
+        entity_id: cover.bedroom_blinds
+        type: set_position
+        position: 90
+      action_button_up_double:
+      - device_id: f71be86cb9438b1649050125e29324e8
+        domain: cover
+        entity_id: cover.bedroom_blinds
+        type: set_position
+        position: 60
+      action_button_down_short:
+      - device_id: f71be86cb9438b1649050125e29324e8
+        domain: cover
+        entity_id: cover.bedroom_blinds
+        type: set_position
+        position: 0
+      action_button_down_double:
+      - device_id: f71be86cb9438b1649050125e29324e8
+        domain: cover
+        entity_id: cover.bedroom_blinds
+        type: set_position
+        position: 30
+      helper_double_press_delay: 500
+      action_button_up_release:
+      - service: cover.stop_cover
+        data: {}
+        target:
+          entity_id: cover.bedroom_blinds
+      button_up_double_press: true
+      button_down_double_press: true
+      action_button_down_release:
+      - service: cover.stop_cover
+        data: {}
+        target:
+          entity_id: cover.bedroom_blinds

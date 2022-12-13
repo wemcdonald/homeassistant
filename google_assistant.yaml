@@ -1,12 +1,12 @@
-filter:
-  # include_entities:
-  include_domains:
-    - light
-  # exclude_entities:
-  # exclude_domains:
-entity_config:
-  light.garage_workbench_lights:
-    name: "The falcon heavy"
-    aliases:
-      - the moon
-    room: garage
+# filter:
+#   # include_entities:
+#   include_domains:
+#     - light
+#   # exclude_entities:
+#   # exclude_domains:
+# entity_config:
+#   light.garage_workbench_lights:
+#     name: "The falcon heavy"
+#     aliases:
+#       - the moon
+#     room: garage

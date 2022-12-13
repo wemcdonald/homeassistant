@@ -38,33 +38,33 @@ sensor: !include tracker_sensors.yaml
 cloud:
   google_actions: !include google_assistant.yaml
 
-google_assistant:
-  project_id: willflixhome
-  service_account: !include willflixhome-2875f2eaadfd.json
-  report_state: true
-  expose_by_default: true
-  # exposed_domains:
-  #   - camera
-  #   - group
-  #   - input_boolean
-  #   - input_select
-  #   - scene
-  #   - switch
-  #   - light
-  #   - lock
-  #   - cover
-  #   - climate
-  #   - vacuum
-  #   - sensor
-  #exposed_domains:
-  #  - switch
-  #  - light
-  entity_config:
-    light.garage_workbench_lights:
-      name: "falcon heavy"
-      aliases:
-        - "moon lights"
-      room: garage
+# google_assistant:
+#   project_id: willflixhome
+#   service_account: !include willflixhome-2875f2eaadfd.json
+#   report_state: true
+#   expose_by_default: true
+#   # exposed_domains:
+#   #   - camera
+#   #   - group
+#   #   - input_boolean
+#   #   - input_select
+#   #   - scene
+#   #   - switch
+#   #   - light
+#   #   - lock
+#   #   - cover
+#   #   - climate
+#   #   - vacuum
+#   #   - sensor
+#   #exposed_domains:
+#   #  - switch
+#   #  - light
+#   entity_config:
+#     light.garage_workbench_lights:
+#       name: "falcon heavy"
+#       aliases:
+#         - "moon lights"
+#       room: garage
 
 # Locks controls
 lock:
@@ -81,14 +81,41 @@ lock:
 
 pyscript: !include pyscript/config.yaml
 
+template: !include templates.yml
+
 frontend:
+  #development_repo: frontend
   themes: !include_dir_merge_named themes
-  #extra_module_url:
+  extra_module_url:
+   - /card-mod.js # Development version
   #  - /hacsfiles/lovelace-card-mod/card-mod.js
 
 # set Lovelace to YAML mode
 lovelace:
   mode: yaml
+  resources:
+  - url: /hacsfiles/button-card/button-card.js
+    type: module
+  - url: /hacsfiles/lovelace-auto-entities/auto-entities.js
+    type: module
+  - url: /hacsfiles/lovelace-card-mod/card-mod.js
+    type: module
+  - url: /hacsfiles/simple-weather-card/simple-weather-card-bundle.js
+    type: module
+  - url: /hacsfiles/weather-radar-card/weather-radar-card.js
+    type: module
+  - url: /local/mini-graph-card-bundle.js?v=0.11.0
+    type: module
+  - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
+    type: module
+  - url: /hacsfiles/light-entity-card/light-entity-card.js
+    type: module
+  - url: /hacsfiles/my-cards/my-cards.js
+    type: module
+  - url: /hacsfiles/lovelace-layout-card/layout-card.js
+    type: module
+  - url: /local/community/lovelace-blank-card/blank-card.js
+    type: module
 
 zone: 
   - name: Home

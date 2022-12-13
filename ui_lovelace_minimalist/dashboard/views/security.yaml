@@ -1,0 +1,55 @@
+title: Security
+path: security
+type: custom:horizontal-layout
+layout:
+  max_cols: 3
+cards:
+#   - type: "custom:button-card"
+#     template: chip_back
+#     variables:
+#       ulm_chip_back_path: /ui-lovelace-minimalist/home
+  - type: "custom:blank-card"
+#   - type: "custom:blank-card"
+
+#   - type: "custom:button-card"
+#     entity: "camera.doorbell"
+#     template: "custom_card_camera"
+#     show_icon: false
+#     variables:
+#       ulm_custom_card_camera_title: false
+#   - type: "custom:button-card"
+#     entity: "camera.colin_s_room"
+#     template: "custom_card_camera"
+#     show_icon: false
+#     variables:
+#       ulm_custom_card_camera_title: false
+#   - type: "custom:button-card"
+#     entity: "camera.blueiris_cameras_downstairs"
+#     template: "custom_card_camera"
+#     show_icon: false
+#     variables:
+#       ulm_custom_card_camera_title: false
+#   - type: "custom:button-card"
+#     entity: "camera.blueiris_cameras_upstairs"
+#     template: "custom_card_camera"
+#     show_icon: false
+#     variables:
+#       ulm_custom_card_camera_title: false
+#   - type: "custom:button-card"
+#     entity: "camera.blueiris_cameras_backyard"
+#     template: "custom_card_camera"
+#     show_icon: false
+#     variables:
+#       ulm_custom_card_camera_title: false
+#   - type: "custom:button-card"
+#     entity: "camera.blueiris_cameras_roof"
+#     template: "custom_card_camera"
+#     show_icon: false
+#     variables:
+#       ulm_custom_card_camera_title: false
+#   - type: "custom:button-card"
+#     entity: "camera.blueiris_cameras_garage"
+#     template: "custom_card_camera"
+#     show_icon: false
+#     variables:
+#       ulm_custom_card_camera_title: false
