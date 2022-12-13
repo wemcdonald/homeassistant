@@ -81,7 +81,7 @@ lock:
 
 pyscript: !include pyscript/config.yaml
 
-template: !include templates.yml
+template: !include templates.yaml
 
 frontend:
   #development_repo: frontend
@@ -100,11 +100,9 @@ lovelace:
     type: module
   - url: /hacsfiles/lovelace-card-mod/card-mod.js
     type: module
-  - url: /hacsfiles/simple-weather-card/simple-weather-card-bundle.js
-    type: module
   - url: /hacsfiles/weather-radar-card/weather-radar-card.js
     type: module
-  - url: /local/mini-graph-card-bundle.js?v=0.11.0
+  - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
     type: module
   - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
     type: module
@@ -114,7 +112,7 @@ lovelace:
     type: module
   - url: /hacsfiles/lovelace-layout-card/layout-card.js
     type: module
-  - url: /local/community/lovelace-blank-card/blank-card.js
+  - url: /hacsfiles/lovelace-blank-card/blank-card.js
     type: module
 
 zone: 

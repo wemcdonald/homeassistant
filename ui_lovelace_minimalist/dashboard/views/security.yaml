@@ -1,55 +1,83 @@
 title: Security
 path: security
-type: custom:horizontal-layout
+type: custom:grid-layout
 layout:
-  max_cols: 3
+  grid-template-columns: repeat(3, 1fr)
+  grid-column-gap: 10px
+  grid-template-rows: auto
+  justify-items: center
+  grid-template-areas: |
+    "header header header"
+  mediaquery:
+    "(max-width: 600px)":
+      grid-template-columns: 100%
+      grid-template-areas: |
+        "header"
+    "(max-width: 900px)":
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-areas: |
+        "header header"
 cards:
-#   - type: "custom:button-card"
-#     template: chip_back
-#     variables:
-#       ulm_chip_back_path: /ui-lovelace-minimalist/home
-  - type: "custom:blank-card"
-#   - type: "custom:blank-card"
+  - type: "custom:button-card"
+    template: chip_back
+    view_layout:
+      grid-area: header
+    variables:
+      ulm_chip_back_path: /ui-lovelace-minimalist/home
+  
+  # Front Door
+  - type: "custom:button-card"
+    entity: "camera.blueiris_cameras_upstairs"
+    template: "custom_card_camera"
+    show_icon: false
+    variables:
+      ulm_custom_card_camera_title: false
 
-#   - type: "custom:button-card"
-#     entity: "camera.doorbell"
-#     template: "custom_card_camera"
-#     show_icon: false
-#     variables:
-#       ulm_custom_card_camera_title: false
-#   - type: "custom:button-card"
-#     entity: "camera.colin_s_room"
-#     template: "custom_card_camera"
-#     show_icon: false
-#     variables:
-#       ulm_custom_card_camera_title: false
-#   - type: "custom:button-card"
-#     entity: "camera.blueiris_cameras_downstairs"
-#     template: "custom_card_camera"
-#     show_icon: false
-#     variables:
-#       ulm_custom_card_camera_title: false
-#   - type: "custom:button-card"
-#     entity: "camera.blueiris_cameras_upstairs"
-#     template: "custom_card_camera"
-#     show_icon: false
-#     variables:
-#       ulm_custom_card_camera_title: false
-#   - type: "custom:button-card"
-#     entity: "camera.blueiris_cameras_backyard"
-#     template: "custom_card_camera"
-#     show_icon: false
-#     variables:
-#       ulm_custom_card_camera_title: false
-#   - type: "custom:button-card"
-#     entity: "camera.blueiris_cameras_roof"
-#     template: "custom_card_camera"
-#     show_icon: false
-#     variables:
-#       ulm_custom_card_camera_title: false
-#   - type: "custom:button-card"
-#     entity: "camera.blueiris_cameras_garage"
-#     template: "custom_card_camera"
-#     show_icon: false
-#     variables:
-#       ulm_custom_card_camera_title: false
+  # Doorbell
+  - type: "custom:button-card"
+    entity: "camera.doorbell"
+    template: "custom_card_camera"
+    show_icon: false
+    variables:
+      ulm_custom_card_camera_title: false
+  
+  # Downstairs
+  - type: "custom:button-card"
+    entity: "camera.blueiris_cameras_downstairs"
+    template: "custom_card_camera"
+    show_icon: false
+    variables:
+      ulm_custom_card_camera_title: false
+  
+  # Colin's Room
+  - type: "custom:button-card"
+    entity: "camera.colin_s_room"
+    template: "custom_card_camera"
+    show_icon: false
+    variables:
+      ulm_custom_card_camera_title: false
+  
+  # Backyard
+  - type: "custom:button-card"
+    entity: "camera.blueiris_cameras_backyard"
+    template: "custom_card_camera"
+    show_icon: false
+    variables:
+      ulm_custom_card_camera_title: false
+  
+  # Roof
+  - type: "custom:button-card"
+    entity: "camera.blueiris_cameras_roof"
+    template: "custom_card_camera"
+    show_icon: false
+    variables:
+      ulm_custom_card_camera_title: false
+  
+  # Garage
+  - type: "custom:button-card"
+    entity: "camera.blueiris_cameras_garage"
+    template: "custom_card_camera"
+    show_icon: false
+    variables:
+      ulm_custom_card_camera_title: false
+      
