@@ -4,13 +4,13 @@ NOTIFICATION_TARGET = "mobile_app_will_s_iphone_14_pro"
 # Alert me if we've left the door open after sunset
 # TODO: Check weather forecast
 PORCH_LEFT_OPEN_TIME = 10 * 60
-PORCH_ENTITY = "binary_sensor.porch_door_contact"
+PORCH_ENTITY = "binary_sensor.porch_door_sensor_contact"
 @time_trigger("once(sunset)")
 @service()
 def check_porch_door():
   if state.get(PORCH_ENTITY) == "on":
     trig_info = task.wait_until(
-        state_trigger="binary_sensor.porch_door_contact == 'off'",
+        state_trigger="binary_sensor.porch_door_sensor_contact == 'off'",
         timeout=PORCH_LEFT_OPEN_TIME
       )
     if trig_info["trigger_type"] == "timeout":

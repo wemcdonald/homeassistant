@@ -1,5 +1,9 @@
 def _alert_on_warm_fridge(common):
   app = common.SubApp(__name__)
+  if not app.config:
+    app.info("Skipping because this app is disabled in the config")
+    return
+    
   @service()
   @state_trigger(
     app.entities['sensor'],
