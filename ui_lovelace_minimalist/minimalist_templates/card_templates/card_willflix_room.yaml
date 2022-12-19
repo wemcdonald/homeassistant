@@ -1,0 +1,283 @@
+---
+card_willflix_room:
+  tap_action:
+    action: "more-info"
+  color: "var(--google-grey-500)"
+  show_icon: true
+  show_name: true
+  show_label: true
+  template:
+    - "ulm_translation_engine"
+  size: "20px"
+  variables:
+    ulm_custom_card_willflix_room_light_entity: null
+    ulm_custom_card_willflix_room_number_of_lights_on: 0
+    ulm_custom_card_willflix_room_number_of_lights: 0
+    ulm_card_thermostat_enable_popup: false
+    ulm_card_light_enable_popup: false
+    ulm_card_dynamic_color: false
+  label: >-
+    [[[
+      let num_on = states[variables.ulm_custom_card_willflix_room_number_of_lights_on].state
+      let num_total = states[variables.ulm_custom_card_willflix_room_number_of_lights].state
+
+      if (num_total == 0) {
+        return "No lights"
+      } else if (num_on == 0) {
+        return "Lights off"
+      } else if (num_on == num_total) {
+        return "Lights on"
+      } else {
+        return `${num_on}/${num_total} lights on`
+      }
+    ]]]
+  styles:
+    card:
+      - border-radius: "20px"
+      - box-shadow: "var(--box-shadow)"
+      - padding: "12px"
+      - background-color: >-
+          [[[
+            if (variables.ulm_custom_card_willflix_room_light_entity) {
+              var color = states[variables.ulm_custom_card_willflix_room_light_entity].attributes.rgb_color;
+              if (states[variables.ulm_custom_card_willflix_room_light_entity].state == "on") {
+                if (color && variables.ulm_card_dynamic_color) {
+                  return 'rgba(' + color + ', 0.2)';
+                }
+                // return 'rgba(var(--color-background-yellow), 0.2)';
+              }
+            }
+            return 'var(--ha-card-background, var(--card-background-color, white))';
+          ]]]
+    grid:
+      - grid-template-areas: "'i lights_on' 'n lights_off' 'l l'"
+      - grid-template-columns: "1fr 1fr"
+      - grid-template-rows: "min-content"
+    icon:
+      - filter: >-
+          [[[
+            if (variables.ulm_custom_card_willflix_room_light_entity
+                && states[variables.ulm_custom_card_willflix_room_light_entity].state == "on"
+                && variables.ulm_card_dynamic_color) {
+              return "contrast(0.6) saturate(1.7)";
+            }
+          ]]]
+      - color: >-
+          [[[
+            if (variables.ulm_custom_card_willflix_room_light_entity) {
+              var color = states[variables.ulm_custom_card_willflix_room_light_entity].attributes.rgb_color;
+              if (states[variables.ulm_custom_card_willflix_room_light_entity].state == "on") {
+                if (color && variables.ulm_card_dynamic_color) {
+                  return 'rgba(' + color + ', 1)';
+                }
+                return 'rgba(var(--color-yellow), 1)';
+              }
+            }
+            return 'rgba(var(--color-theme), 0.2)';
+          ]]]
+    img_cell:
+      - border-radius: "50%"
+      - place-self: "flex-start"
+      - width: "42px"
+      - height: "42px"
+      - margin-left: "12px"
+      - background-color: >-
+          [[[
+            if (variables.ulm_custom_card_willflix_room_light_entity) {
+              var color = states[variables.ulm_custom_card_willflix_room_light_entity].attributes.rgb_color;
+              if (states[variables.ulm_custom_card_willflix_room_light_entity].state == "on") {
+                if (color && variables.ulm_card_dynamic_color) {
+                  return 'rgba(' + color + ', 0.3)';
+                }
+                return 'rgba(var(--color-yellow), 0.2)';
+              }
+            }
+            return 'rgba(255, 255, 255, 0.0)';
+          ]]]
+    name:
+      - align-self: "end"
+      - justify-self: "start"
+      - font-weight: "bold"
+      - font-size: "14px"
+      - margin-left: "12px"
+      - margin-top: >-
+          [[[
+            if (variables.ulm_custom_card_willflix_room_light_entity && variables.ulm_custom_card_willflix_room_climate_entity) {
+              return "8px";
+            } else if (variables.ulm_custom_card_willflix_room_light_entity) {
+              return "12px";
+            } else if (variables.ulm_custom_card_willflix_room_climate_entity) {
+              return "8px";
+            } else {
+              return "12px";
+            }
+          ]]]
+      - max-width: >-
+          [[[
+            if (variables.ulm_custom_card_willflix_room_light_entity && variables.ulm_custom_card_willflix_room_climate_entity) {
+              return "85%";
+            } else if (variables.ulm_custom_card_willflix_room_light_entity) {
+              return "100%";
+            } else if (variables.ulm_custom_card_willflix_room_climate_entity) {
+              return "85%";
+            } else {
+              return "100%";
+            }
+          ]]]
+      - color: >-
+          [[[
+            if (variables.ulm_custom_card_willflix_room_light_entity) {
+              var color = states[variables.ulm_custom_card_willflix_room_light_entity].attributes.rgb_color;
+              if (states[variables.ulm_custom_card_willflix_room_light_entity].state == "on") {
+                if (color && variables.ulm_card_dynamic_color) {
+                  return 'rgba(' + color + ', 1)';
+                }
+                return 'rgba(var(color-yellow-text), 1)';
+              }
+              return 'rgba(var(--color-theme), 0.6)';
+            }
+            return 'rgba(var(--color-theme), 0.6)';
+          ]]]
+      - filter: >-
+          [[[
+            if (variables.ulm_custom_card_willflix_room_light_entity
+                && states[variables.ulm_custom_card_willflix_room_light_entity].state == "on"
+                && variables.ulm_card_dynamic_color) {
+              return "contrast(0.6) saturate(1.7)";
+            }
+          ]]]
+    label:
+      - justify-self: "start"
+      - align-self: "start"
+      - font-weight: "bolder"
+      - font-size: "12px"
+      - filter: "opacity(40%)"
+      - margin-left: "12px"
+      - margin-bottom: >-
+          [[[
+            if (variables.ulm_custom_card_willflix_room_light_entity && variables.ulm_custom_card_willflix_room_climate_entity) {
+              return "0px";
+            } else if (variables.ulm_custom_card_willflix_room_light_entity) {
+              return "3px";
+            } else if (variables.ulm_custom_card_willflix_room_climate_entity) {
+              return "0px";
+            } else {
+              return "3px";
+            }
+          ]]]
+      - max-width: >-
+          [[[
+            if (variables.ulm_custom_card_willflix_room_light_entity && variables.ulm_custom_card_willflix_room_climate_entity) {
+              return "85%";
+            } else if (variables.ulm_custom_card_willflix_room_light_entity) {
+              return "100%";
+            } else if (variables.ulm_custom_card_willflix_room_climate_entity) {
+              return "85%";
+            } else {
+              return "100%";
+            }
+          ]]]
+    state:
+      - justify-self: "start"
+      - align-self: "start"
+      - font-weight: "bolder"
+      - font-size: "12px"
+      - filter: "opacity(40%)"
+      - margin-left: "12px"
+    custom_fields:
+      lights_on:
+        - display: "block"
+      lights_off:
+        - display: "block"
+  custom_fields:
+    lights_on:
+      card:
+        type: "custom:button-card"
+        template:
+          - "widget_icon"
+          - "ulm_actions_card"
+          - "ulm_custom_actions"
+        variables:
+          ulm_card_tap_action: "call-service"
+          ulm_card_tap_service: 'light.turn_on'
+          ulm_card_tap_service_data: >
+            [[[
+              return {
+                "entity_id": variables.ulm_custom_card_willflix_room_light_entity
+              }
+            ]]]
+        entity: "[[[ return variables.ulm_custom_card_willflix_room_light_entity ]]]"        
+        state:
+          - operator: template
+            # Fully on
+            value: >
+              [[[
+                  let num_on = states[variables.ulm_custom_card_willflix_room_number_of_lights_on].state
+                  let num_total = states[variables.ulm_custom_card_willflix_room_number_of_lights].state
+
+                  return num_on > 0 && num_on == num_total
+              ]]]
+            icon: "mdi:lightbulb-group"
+            styles:
+              icon:
+                - color: "rgba(var(--color-yellow), 1)"
+              img_cell:
+                - background-color: 'rgba(var(--color-yellow), 0.2)'
+          - operator: template
+            # Partially on
+            value: >
+              [[[
+                  let num_on = states[variables.ulm_custom_card_willflix_room_number_of_lights_on].state
+                  let num_total = states[variables.ulm_custom_card_willflix_room_number_of_lights].state
+
+                  return num_on > 0 && num_on < num_total
+              ]]]
+            icon: "mdi:lightbulb-group-outline"
+            styles:
+              icon:
+                - color: "rgba(var(--color-yellow), 1)"
+              card:
+                - background-color: 'rgba(var(--color-white), 0)'
+          - operator: default
+            icon: "mdi:lightbulb-group-outline"
+            styles:
+              card:
+                - background-color: 'rgba(var(--color-white), 0)'
+                
+    lights_off:
+      card:
+        type: "custom:button-card"
+        template:
+          - "widget_icon"
+          - "ulm_actions_card"
+          - "ulm_custom_actions"
+        variables:
+          ulm_card_tap_action: "call-service"
+          ulm_card_tap_service: 'light.turn_off'
+          ulm_card_tap_service_data: >
+            [[[
+              return {
+                "entity_id": variables.ulm_custom_card_willflix_room_light_entity
+              }
+            ]]]
+        entity: "[[[ return variables.ulm_custom_card_willflix_room_light_entity ]]]"        
+        state:
+          - operator: template
+            value: >
+              [[[
+                  let num_on = states[variables.ulm_custom_card_willflix_room_number_of_lights_on].state
+                  let num_total = states[variables.ulm_custom_card_willflix_room_number_of_lights].state
+
+                  return num_total > 0 && num_on == 0
+              ]]]
+            icon: "mdi:lightbulb-group-off"
+            styles:
+              icon:
+                - color: "rgb(147, 180, 208)"
+              img_cell:
+                - background-color: 'rgba(27, 69, 106, 0.3)'
+          - operator: default
+            icon: "mdi:lightbulb-group-off-outline"
+            styles:
+              card:
+                - background-color: 'rgba(var(--color-white), 0)'

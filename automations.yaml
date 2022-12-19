@@ -117,3 +117,133 @@
         data: {}
         target:
           entity_id: cover.bedroom_blinds
+- id: '1671026945292'
+  alias: Sprinkler timer
+  description: ''
+  trigger:
+  - platform: time
+    at: 09:00:00
+  - platform: time
+    at: '21:00:00'
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 2b8fc563710ea3e9c827a01437dba68d
+    entity_id: switch.lawn_sprinkler_state
+    domain: switch
+  mode: single
+- id: '1671027167043'
+  alias: Night lights off
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: a2a6f0e5d0d73678a734168fec4fb417
+    entity_id: light.outside_backyard_lights
+    domain: light
+  - type: turn_off
+    device_id: 5eed28001a1b254d5f776a8d64e770b6
+    entity_id: light.outside_upstairs_front_door
+    domain: light
+  - type: turn_off
+    device_id: 30f137a7666ff09d7933710ba5d5da20
+    entity_id: light.tree_2
+    domain: light
+  - type: turn_off
+    device_id: d80747eaf38ea44507b791fecc0a8bec
+    entity_id: light.porch_2
+    domain: light
+  mode: single
+- id: '1671027306690'
+  alias: Sunset lights on
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: 0
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 92a9c77d3892cc39800db2db6631025f
+    entity_id: light.outside_downstairs_door
+    domain: light
+  - type: turn_on
+    device_id: 5eed28001a1b254d5f776a8d64e770b6
+    entity_id: light.outside_upstairs_front_door
+    domain: light
+  - type: turn_on
+    device_id: 78c3c337df9ee8b131ff27d113791dee
+    entity_id: light.tree_1
+    domain: light
+  - type: turn_on
+    device_id: 30f137a7666ff09d7933710ba5d5da20
+    entity_id: light.tree_2
+    domain: light
+  - type: turn_on
+    device_id: d80747eaf38ea44507b791fecc0a8bec
+    entity_id: light.porch_2
+    domain: light
+  mode: single
+- id: '1671037098249'
+  alias: Door light off when Guest bedtime
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - light.office_accent_lights
+    to: 'off'
+  condition:
+  - condition: time
+    before: 01:00:00
+    after: '22:00:00'
+  action:
+  - type: turn_off
+    device_id: 5eed28001a1b254d5f776a8d64e770b6
+    entity_id: light.outside_upstairs_front_door
+    domain: light
+  mode: single
+- id: '1671037288952'
+  alias: Xmas off at night
+  description: ''
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 78c3c337df9ee8b131ff27d113791dee
+    entity_id: light.tree_1
+    domain: light
+  - type: turn_off
+    device_id: 30f137a7666ff09d7933710ba5d5da20
+    entity_id: light.tree_2
+    domain: light
+  - type: turn_off
+    device_id: d80747eaf38ea44507b791fecc0a8bec
+    entity_id: light.porch_2
+    domain: light
+  mode: single
+- id: '1671037300455'
+  alias: Xmas off at night
+  description: ''
+  trigger:
+  - platform: time
+    at: '20:00:00'
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 78c3c337df9ee8b131ff27d113791dee
+    entity_id: light.tree_1
+    domain: light
+  - type: turn_off
+    device_id: 30f137a7666ff09d7933710ba5d5da20
+    entity_id: light.tree_2
+    domain: light
+  - type: turn_off
+    device_id: d80747eaf38ea44507b791fecc0a8bec
+    entity_id: light.porch_2
+    domain: light
+  mode: single

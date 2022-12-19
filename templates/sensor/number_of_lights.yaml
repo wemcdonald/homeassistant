@@ -1,0 +1,48 @@
+- name: "Number of lights in Garage"
+  state: >
+    {{ states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ['Garage'])
+      | list | count }}
+- name: "Number of lights Outside"
+  state: >
+    {{ states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ['Outside'])
+      | list | count }}
+- name: "Number of lights in Marianas Room"
+  state: >
+    {{ states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Mariana's Room"])
+      | list | count }}
+- name: "Number of lights in Kitchen"
+  state: >
+    {{ states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Kitchen"])
+      | list | count }}
+- name: "Number of lights in Living Room"
+  state: >
+    {{ states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Living Room"])
+      | list | count }}
+- name: "Number of lights in Office"
+  state: >
+    {{ states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Office"])
+      | list | count }}
+- name: "Number of lights in Colins Room"
+  state: >
+    {{ states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Colin's Room"])
+      | list | count }}
+- name: "Number of lights in Master Bedroom"
+  state: >
+    {{ states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Master Bedroom"])
+      | list | count }}

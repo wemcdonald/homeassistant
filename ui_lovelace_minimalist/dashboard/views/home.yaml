@@ -84,17 +84,24 @@ cards:
   #       color: blue
 
 
-  - type: "custom:button-card"
-    name: Sprinklers
-    show_label: true
-    entity: switch.lawn_sprinkler_state
-    icon: mdi:sprinkler
-    show_state: true
-    triggers_update:
-      - switch.lawn_sprinkler_state
-      - sensor.lawn_moisture_sensor_humidity
-    label: >
-      [[[ return states["sensor.lawn_moisture_sensor_humidity"].state + "% Wet" ]]]
+  - type: horizontal-stack
+    cards:
+    - type: 'custom:button-card'
+      template: card_input_boolean
+      entity: input_boolean.house_guest
+      variables:
+        ulm_card_input_boolean_name: House Guest Mode
+    - type: "custom:button-card"
+      name: Sprinklers
+      show_label: true
+      entity: switch.lawn_sprinkler_state
+      icon: mdi:sprinkler
+      show_state: true
+      triggers_update:
+        - switch.lawn_sprinkler_state
+        - sensor.lawn_moisture_sensor_humidity
+      label: >
+        [[[ return states["sensor.lawn_moisture_sensor_humidity"].state + "% Wet" ]]]
 
   - type: 'custom:button-card'
     template: card_title
@@ -105,8 +112,8 @@ cards:
       # Living Room
       - type: "custom:button-card"
         template:
-          - card_esh_room
-          - yellow_on
+          - card_willflix_room
+          # - yellow_on
         name: Living Room
         entity: light.living_room_lights
         icon: mdi:sofa
@@ -114,15 +121,17 @@ cards:
           action: navigate
           navigation_path: "living-room"
         variables:
-          ulm_custom_card_esh_room_light_entity: light.living_room_lights
+          ulm_custom_card_willflix_room_light_entity: light.living_room_lights
+          ulm_custom_card_willflix_room_number_of_lights_on: sensor.number_of_lights_on_in_living_room
+          ulm_custom_card_willflix_room_number_of_lights: sensor.number_of_lights_in_living_room
           ulm_card_dynamic_color: true
         label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
 
       # Kitchen
       - type: "custom:button-card"
         template:
-          - card_esh_room
-          - yellow_on
+          - card_willflix_room
+          # - yellow_on
         name: Kitchen
         entity: light.kitchen_lights
         icon: mdi:silverware-fork-knife
@@ -130,7 +139,9 @@ cards:
           action: navigate
           navigation_path: "kitchen"
         variables:
-          ulm_custom_card_esh_room_light_entity: light.kitchen_lights
+          ulm_custom_card_willflix_room_light_entity: light.kitchen_lights
+          ulm_custom_card_willflix_room_number_of_lights_on: sensor.number_of_lights_on_in_kitchen
+          ulm_custom_card_willflix_room_number_of_lights: sensor.number_of_lights_in_kitchen
           ulm_card_dynamic_color: true
         #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
 
@@ -138,8 +149,8 @@ cards:
     cards:
       - type: "custom:button-card"
         template:
-          - card_esh_room
-          - yellow_on
+          - card_willflix_room
+          # - yellow_on
         name: Garage
         entity: light.garage_lights
         icon: mdi:garage
@@ -147,14 +158,15 @@ cards:
           action: navigate
           navigation_path: "garage"
         variables:
-          ulm_custom_card_esh_room_light_entity: light.garage_lights
+          ulm_custom_card_willflix_room_light_entity: light.garage_lights
+          ulm_custom_card_willflix_room_number_of_lights_on: sensor.number_of_lights_on_in_garage
+          ulm_custom_card_willflix_room_number_of_lights: sensor.number_of_lights_in_garage
           ulm_card_dynamic_color: true
-        #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
 
       - type: "custom:button-card"
         template:
-          - card_esh_room
-          - yellow_on
+          - card_willflix_room
+          # - yellow_on
         name: Bedroom
         entity: light.bedroom_lights
         icon: mdi:bed
@@ -162,7 +174,9 @@ cards:
           action: navigate
           navigation_path: "bedroom"
         variables:
-          ulm_custom_card_esh_room_light_entity: light.bedroom_lights
+          ulm_custom_card_willflix_room_light_entity: light.bedroom_lights
+          ulm_custom_card_willflix_room_number_of_lights_on: sensor.number_of_lights_on_in_master_bedroom
+          ulm_custom_card_willflix_room_number_of_lights: sensor.number_of_lights_in_master_bedroom
           ulm_card_dynamic_color: true
         #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
 
@@ -170,8 +184,8 @@ cards:
     cards:
       - type: "custom:button-card"
         template:
-          - card_esh_room
-          - yellow_on
+          - card_willflix_room
+          # - yellow_on
         name: "Colin's Room"
         entity: light.colins_room_lights
         icon: mdi:alpha-c-circle
@@ -179,14 +193,16 @@ cards:
           action: navigate
           navigation_path: "colins-room"
         variables:
-          ulm_custom_card_esh_room_light_entity: light.colins_room_lights
+          ulm_custom_card_willflix_room_light_entity: light.colins_room_lights
+          ulm_custom_card_willflix_room_number_of_lights_on: sensor.number_of_lights_on_in_colins_room
+          ulm_custom_card_willflix_room_number_of_lights: sensor.number_of_lights_in_colins_room
           ulm_card_dynamic_color: true
         #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
 
       - type: "custom:button-card"
         template:
-          - card_esh_room
-          - yellow_on
+          - card_willflix_room
+          # - yellow_on
         name: Mariana's Room
         entity: light.marianas_room_lights
         icon: mdi:alpha-m-circle
@@ -194,7 +210,9 @@ cards:
           action: navigate
           navigation_path: "marianas-room"
         variables:
-          ulm_custom_card_esh_room_light_entity: light.marianas_room_lights
+          ulm_custom_card_willflix_room_light_entity: light.marianas_room_lights
+          ulm_custom_card_willflix_room_number_of_lights_on: sensor.number_of_lights_on_in_marianas_room
+          ulm_custom_card_willflix_room_number_of_lights: sensor.number_of_lights_in_marianas_room
           ulm_card_dynamic_color: true
         #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
 
@@ -202,8 +220,8 @@ cards:
     cards:
       - type: "custom:button-card"
         template:
-          - card_esh_room
-          - yellow_on
+          - card_willflix_room
+          # - yellow_on
         name: Office
         entity: light.office_lights
         icon: mdi:chair-rolling
@@ -211,14 +229,16 @@ cards:
           action: navigate
           navigation_path: "office-room"
         variables:
-          ulm_custom_card_esh_room_light_entity: light.office_lights
+          ulm_custom_card_willflix_room_light_entity: light.office_lights
+          ulm_custom_card_willflix_room_number_of_lights_on: sensor.number_of_lights_on_in_office
+          ulm_custom_card_willflix_room_number_of_lights: sensor.number_of_lights_in_office
           ulm_card_dynamic_color: true
         #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
 
       - type: "custom:button-card"
         template:
-          - card_esh_room
-          - yellow_on
+          - card_willflix_room
+          # - yellow_on
         name: Outside
         entity: light.outside_lights
         icon: mdi:pine-tree
@@ -226,7 +246,9 @@ cards:
           action: navigate
           navigation_path: "outside"
         variables:
-          ulm_custom_card_esh_room_light_entity: light.outside_lights
+          ulm_custom_card_willflix_room_light_entity: light.outside_lights
+          ulm_custom_card_willflix_room_number_of_lights_on: sensor.number_of_lights_on_outside
+          ulm_custom_card_willflix_room_number_of_lights: sensor.number_of_lights_outside
           ulm_card_dynamic_color: true
         #label: '[[[ return states["sensor.living_room_temperature"].state + "°C" ]]]'
 

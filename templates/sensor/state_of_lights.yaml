@@ -1,0 +1,56 @@
+- name: "State of lights on in Garage"
+  state: >
+    {{ float(states('sensor.number_of_lights_on_in_garage')) /
+      (states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ['Garage'])
+      | list | count) }}
+- name: "State of lights on Outside"
+  state: >
+    {{ float(states('sensor.number_of_lights_on_outside')) /
+      (states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ['Outside'])
+      | list | count) }}
+- name: "State of lights on in Marianas Room"
+  state: >
+    {{ float(states('sensor.number_of_lights_on_in_marianas_room')) /
+      (states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Mariana's Room"])
+      | list | count) }}
+- name: "State of lights on in Kitchen"
+  state: >
+    {{ float(states('sensor.number_of_lights_on_in_kitchen')) /
+      (states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Kitchen"])
+      | list | count) }}
+- name: "State of lights on in Living Room"
+  state: >
+    {{ float(states('sensor.number_of_lights_on_in_living_room')) /
+      (states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Living Room"])
+      | list | count) }}
+- name: "State of lights on in Office"
+  state: >
+    {{ float(states('sensor.number_of_lights_on_in_office')) /
+      (states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Office"])
+      | list | count) }}
+- name: "State of lights on in Colins Room"
+  state: >
+    {{ float(states('sensor.number_of_lights_on_in_colins_room')) /
+      (states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Colin's Room"])
+      | list | count) }}
+- name: "State of lights on in Master Bedroom"
+  state: >
+    {{ float(states('sensor.number_of_lights_on_in_master_bedroom')) /
+      (states.light
+      | map(attribute='entity_id') | map('area_name')
+      | select('in', ["Master Bedroom"])
+      | list | count) }}
