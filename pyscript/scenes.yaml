@@ -1,4 +1,4 @@
-all_turn_off:
+out_of_town:
   turn_off:
     areas:
       - colin_s_room
@@ -11,6 +11,7 @@ all_turn_off:
       - outside
       - second_bathroom
       - stairs
+
 bedtime:
   turn_off:
     areas:
@@ -35,10 +36,12 @@ bedtime:
     entities:
       light.hallway_lights: 7
       light.stairs_main_lights: 7
+
 colin_sleep:
   turn_off:
     areas:
       - colin_s_room
+
 story_time:
   turn_off:
     entities:
@@ -47,15 +50,27 @@ story_time:
   dim:
     entities:
       light.colin_s_room_sconces: 30
+
 sleep:
   depends_turn_on:
     - bedtime
   turn_off:
     areas:
       - master_bedroom
+
 morning:
   turn_on:
     areas: 
     entities:
       - light.master_bedroom_will_s_light
       - light.master_bedroom_robin_s_light
+
+garage_on:
+  turn_on:
+    areas:
+      - garage
+
+garage_off:
+  turn_off:
+    areas:
+      - garage

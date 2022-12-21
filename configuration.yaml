@@ -81,7 +81,10 @@ lock:
 
 pyscript: !include pyscript/config.yaml
 
-template: !include templates.yaml
+template: !include templates/templates.yaml
+light:
+  - platform: template
+    lights: !include_dir_merge_named templates/light/
 
 frontend:
   #development_repo: frontend

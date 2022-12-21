@@ -1,0 +1,17 @@
+magic_scene_storytime:
+  friendly_name: "Magic Scene Storytime"
+  unique_id: magic_scene_storytime
+  turn_on:
+    service: script.theater_lights_on
+  turn_off:
+    service: script.theater_lights_off
+  value_template: >
+    {{
+      is_state('light.colin_s_bedroom_main_lights', "off")
+      and
+      is_state('light.colin_s_bedroom_sconces', "off")
+      and
+      is_state('light.colin_s_bedroom_accent_lights', "on")
+      and 
+      state_attr('light.colin_s_bedroom_accent_lights', 'brightness') < 100
+    }}

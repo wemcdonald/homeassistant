@@ -26,6 +26,7 @@ def check_porch_door():
 # Alert me if I've left my bike unplugged
 BIKE_CHARGER_POWER = "sensor.bike_charger_current_power"
 @time_trigger("once(20:00)")
+@service()
 def check_bike_plug():
   power = state.get(BIKE_CHARGER_POWER)
   isPlugged = False

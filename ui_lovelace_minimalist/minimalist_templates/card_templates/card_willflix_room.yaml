@@ -92,7 +92,7 @@ card_willflix_room:
                 return 'rgba(var(--color-yellow), 0.2)';
               }
             }
-            return 'rgba(255, 255, 255, 0.0)';
+            return 'rgba(var(--color-theme), 0.05)';
           ]]]
     name:
       - align-self: "end"

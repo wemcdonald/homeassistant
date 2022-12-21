@@ -1,0 +1,36 @@
+- name: "Magic Scene Storytime"
+  state: >
+    {{
+      is_state('light.colin_s_bedroom_main_lights', "off")
+      and
+      is_state('light.colin_s_bedroom_sconces', "off")
+      and
+      is_state('light.colin_s_bedroom_accent_lights', "on")
+      and 
+      state_attr('light.colin_s_bedroom_accent_lights', 'brightness') < 100
+    }}
+- name: "Magic Scene Colin Bedtime"
+  state: >
+    {{
+      is_state('light.colins_room_lights', "off")
+    }}
+- name: "Magic Scene Bedtime"
+  state: >
+    {{
+      false
+    }}
+- name: "Magic Scene Goodnight"
+  state: >
+    {{
+      false
+    }}
+- name: "Magic Scene Out of the House"
+  state: >
+    {{
+      false
+    }}
+- name: "Magic Scene Out of Town"
+  state: >
+    {{
+      false
+    }}
